@@ -6,12 +6,12 @@ export type Component = JSX.Element
 export type RenderComponent = DefineComponent<any, any, any, any, any>
 export type RenderFunction<T extends object> = (props: T) => JSX.Element
 
-/** Возвращает тип элемента из массива */
+/** Returns the type of an element from an array */
 export type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType extends readonly (infer ElementType)[]
   ? ElementType
   : never
 
-/** Возвращает ключи объекта, где значение соответсвуте типу Value */
+/** Returns the keys of the object where the value matches the Value type. */
 export type KeysMatching<Object extends object, Value> = {
   [K in keyof Object]-?: Object[K] extends Value ? K : never
 }[keyof Object]

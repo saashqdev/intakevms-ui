@@ -67,7 +67,7 @@ export const AddImageInput = defineComponent({
           onClick={preventDefault}
         >
           <ModalForm
-            title='Добавить виртуальный образ'
+            title='Add virtual image'
             position='top'
             fields={fields(this.storages, this.filteredImages)}
             onSubmit={this.submit}

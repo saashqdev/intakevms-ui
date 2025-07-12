@@ -4,7 +4,7 @@ import { api } from '@api'
 import type { AugmentedActionContext, RootState } from '@/store/types'
 import type {
   InterfaceDeleted,
-  OpenvairModulesBlockDeviceEntrypointsSchemasInterface as InterfaceCreated,
+  IntakevmsModulesBlockDeviceEntrypointsSchemasInterface as InterfaceCreated,
 } from '@api/generated'
 
 import type { State } from './state'
@@ -34,7 +34,7 @@ export const actions: ActionTree<State, RootState> & Actions = {
   },
   [AT.LOGIN_SESSION]: async ({ commit }, payload) => {
     const { data } = await api.blockDevices.loginBlockDevicesLoginPost({
-      openvairModulesBlockDeviceEntrypointsSchemasInterface: payload,
+      intakevmsModulesBlockDeviceEntrypointsSchemasInterface: payload,
     })
     commit(MT.SET_SESSION_ITEM, data)
   },

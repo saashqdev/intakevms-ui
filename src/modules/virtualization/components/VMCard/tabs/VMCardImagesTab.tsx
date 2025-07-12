@@ -26,9 +26,9 @@ export const VMCardImagesTab = defineComponent({
           const image = find(this.images, { id: v.disk_id })
           const storage = find(this.storages, { id: image?.storage_id })
           if (!image || !storage) return null
-          // TODO: ссылка на страницу хранилища
-          // TODO: ссылка на страницу образа
-          // TODO: Tooltip с подробной инфой по диску
+          // TODO: link to the repository page
+          // TODO: link to image page
+          // TODO: Tooltip with detailed information on the disk
           return (
             <div
               style={{

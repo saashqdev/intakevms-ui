@@ -24,7 +24,7 @@ export const booleanFilter: DataTableHeader['customKeyFilter'] = (v, f) => {
 
 export const statusFilter: DataTableHeader['customKeyFilter'] = (v, f) => {
   const statusOkKeys = ['true', '1', 'ok', 'ок']
-  const statusErrorKeys = ['false', '0', 'error', 'ошибка']
+  const statusErrorKeys = ['false', '0', 'error', 'error']
 
   v = v.toString().toLowerCase()
   f = f.toString().toLowerCase()

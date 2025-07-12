@@ -1,9 +1,9 @@
 import type { PluralizationRules } from '@intlify/core-base'
 
 export const pluralizationRules: PluralizationRules = {
-  /** @param choice {number} индекс выбора, переданный в $tc: `$tc('path.to.rule', choiceIndex)`
-   *  @param choicesLength {number} общее количество доступных вариантов
-   *  @returns финальный индекс для выбора соответственного варианта слова */
+  /** @param choice {number} selection index passed in $tc: `$tc('path.to.rule', choiceIndex)`
+   *  @param choicesLength {number} total number of available options
+   *  @returns final index for selecting the corresponding word variant */
   ru: function (choice, choicesLength) {
     if (choice === 0) return 0
 

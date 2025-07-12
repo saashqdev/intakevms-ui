@@ -15,15 +15,15 @@ const diskCreateFields = (storages: Storage[]): (FieldType | FieldsBlockWithFiel
   {
     type: 'text',
     name: 'name',
-    label: 'Имя',
-    placeholder: 'Укажите имя',
+    label: 'Name',
+    placeholder: 'Enter your name',
     validation: 'required|length:2,45|name',
   },
   {
     type: 'select',
     name: 'storage_id',
-    label: 'Хранилище',
-    placeholder: 'Выберите хранилище',
+    label: 'Storage',
+    placeholder: 'Select storage',
     validation: 'required',
     options: () =>
       (storages || []).map(i => ({
@@ -39,8 +39,8 @@ const diskCreateFields = (storages: Storage[]): (FieldType | FieldsBlockWithFiel
       {
         type: 'select',
         name: 'format',
-        label: 'Формат',
-        placeholder: 'Выберите формат',
+        label: 'Format',
+        placeholder: 'Select format',
         validation: 'required',
         options: [
           { label: 'qcow2', value: 'qcow2' },
@@ -52,7 +52,7 @@ const diskCreateFields = (storages: Storage[]): (FieldType | FieldsBlockWithFiel
   {
     type: 'size',
     name: 'size',
-    label: 'Размер',
+    label: 'Size',
     allowed: ['M', 'G', 'T'],
     validation: 'required|min:1|maxSize',
     validationRules: {

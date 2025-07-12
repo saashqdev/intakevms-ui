@@ -21,7 +21,7 @@ export const IONetworkBandwidthChart = defineComponent({
   },
   computed: {
     dataCurrent() {
-      return this.$store.state.dashboard.data.bandwith_data
+      return this.$store.state.dashboard.data.bandwidth_data
     },
   },
   watch: {

@@ -1,13 +1,13 @@
 import { fromUnixTime, format, parseISO } from 'date-fns'
 
-/** Форматирует дату
+/** Formats the date
  *
- * **NOTE:** Используется только для отображения в HTML
+ * **NOTE:** Used for HTML display only.
  *
- * **NOTE_2:** при передаче unixTimestamp в options нужно указать парамерт from: 'unix'
- * @param date дата в формате Date | ISO string | timestamp | unixTimestamp
- * @param options опции для форматирования
- * @return строка с отформатированной датой
+ * **NOTE_2:** when passing unixTimestamp in options you need to specify the parameter from: 'unix'
+ * @param date date in format Date | ISO string | timestamp | unixTimestamp
+ * @param options formatting options
+ * @return formatted date string
  * @example
  * formatDate(new Date()) // => "05.06.23 13:32:18"
  * formatDate(1685961138174) // => "05.06.23 13:32:18"

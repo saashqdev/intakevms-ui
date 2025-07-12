@@ -17,7 +17,7 @@ export * from './ru'
 export const defaultLocale =
   getLocalStorage('ui_settings')?.locale || window.navigator.language.startsWith('ru-') ? 'ru' : 'en'
 
-// regexp кириллица [а-яё]
+// regexp cyrillic [a-yao]
 export const i18n = createI18n<[MessageSchema], 'ru' | 'en', false>({
   locale: defaultLocale,
   fallbackLocale: defaultLocale,

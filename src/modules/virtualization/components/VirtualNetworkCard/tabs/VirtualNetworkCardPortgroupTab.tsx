@@ -16,18 +16,18 @@ const withConfirm = useWithConfirm()
 const headers: DataTableHeaders = [
   { key: 'port_group_name', title: 'Имя' },
   { key: 'is_trunk', title: 'Trunk' },
-  { key: 'tags', title: 'Тэги', valueRender: v => v?.join(', ') },
+  { key: 'tags', title: 'Tags', valueRender: v => v?.join(', ') },
 ]
 
 const useDeleteAction = (arg: PortGroup | PortGroup[], vnetId: string) => {
   if (isArray(arg)) {
     return {
-      title: 'Удалить',
+      title: 'Delete',
       icon: <Icon icon='delete' size='small' />,
       onClick: () =>
         withConfirm({
-          title: 'Удалить портгруппы',
-          text: `Вы действительно хотите удалить портгруппы (${arg.length})?`,
+          title: 'Delete portgroups',
+          text: `Are you sure you want to delete portgroups? (${arg.length})?`,
           itemsList: map(arg, 'port_group_name') as string[],
           onConfirm: () =>
             map(arg, i =>
@@ -36,24 +36,24 @@ const useDeleteAction = (arg: PortGroup | PortGroup[], vnetId: string) => {
                 portGroupName: `${i.port_group_name}`,
               })
             ),
-          confirmText: 'Удалить',
+          confirmText: 'Delete',
           danger: true,
         }),
     }
   }
   return {
-    title: 'Удалить',
+    title: 'Delete',
     icon: <Icon icon='delete' size='small' />,
     onClick: () =>
       withConfirm({
-        title: 'Удалить портгруппу',
-        text: `Вы действительно хотите удалить портгруппу ${arg.port_group_name}?`,
+        title: 'Delete portgroup',
+        text: `Are you sure you want to delete the portgroup? ${arg.port_group_name}?`,
         onConfirm: () =>
           store.dispatch(VirtualizationActionTypes.DELETE_PORTGROUP, {
             id: vnetId,
             portGroupName: `${arg.port_group_name}`,
           }),
-        confirmText: 'Удалить',
+        confirmText: 'Delete',
         danger: true,
       }),
   }
@@ -70,7 +70,7 @@ export const VirtualNetworkCardPortgroupTab = defineComponent({
     }
     const tableActions: ButtonProps[] = [
       {
-        title: 'Создать',
+        title: 'Create',
         icon: { icon: 'plus', size: 'small' },
         modal: <PortGroupCreateModal id={this.vnet.id} />,
       },

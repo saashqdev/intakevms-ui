@@ -5,9 +5,9 @@ import { layoutWithDefault } from './utils'
 export const ROW_HEIGHT = 10
 export const MARGIN = 16
 
-/** Параметры минимальной и начальной высоты/ширины виджетов
- * @minH/minW - минимально возможная высота/ширина
- * @h/w - стандартная высота/ширина */
+/** Minimum and initial height/width parameters for widgets
+ * @minH/minW - minimum possible height/width
+ * @h/w - standard height/width */
 export const widgetsDimensionsOptions: Partial<
   Record<keyof typeof DashboardWidgets, Omit<LayoutItem, 'i' | 'x' | 'y'>>
 > = {
@@ -21,7 +21,7 @@ export const widgetsDimensionsOptions: Partial<
   GridSettingsWidget: { minH: 5, minW: 5, h: 6, w: 6 },
 }
 
-/** Настройки сетки по умолчанию */
+/** Default Grid Settings */
 export const defaultGridSettings = {
   preventCollision: true,
   isResizable: true,
@@ -29,7 +29,7 @@ export const defaultGridSettings = {
   verticalCompact: false,
 }
 
-/** Виджеты по-умолчанию отображаемые в сетки */
+/** Widgets displayed in the grid by default */
 export const defaultLayouts: Record<number, Parameters<typeof layoutWithDefault>[0]> = {
   2100: [
     { i: 'GridSettingsWidget', w: 5, h: 5, x: 42, y: 28 },

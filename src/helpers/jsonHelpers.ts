@@ -1,5 +1,5 @@
-/** Проверяет является ли строка валидным JSON
- * @param str строка для проверки
+/** Checks if a string is valid JSON
+ * @param str string to check
  * @return Returns boolean
  * @example
  * const json = JSON.stringify({test: "123"})

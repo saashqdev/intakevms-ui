@@ -27,7 +27,7 @@ const headers: DataTableHeaders = [
     title: t(`${tPrefix}.vcpu`),
     valueRender: (v, i) => (i.cpu.type === 'dynamic' ? v : i.cpu.sockets * i.cpu.cores * i.cpu.threads),
   },
-  { key: 'cpu.type', title: t(`${tPrefix}.topology`) }, // Кол.ЦПУ * Ядер * Потоков на ядро
+  { key: 'cpu.type', title: t(`${tPrefix}.topology`) }, // No. of CPU * Cores * Threads per core
   { key: 'power_state', title: t(`${tPrefix}.powerState.header`), valueRender: v => <VMPowerStatusSell v={v} /> },
   { key: 'status', title: t('status'), valueRender: v => <TableCellStatus status={v} /> },
   { key: 'information', title: t(`${tPrefix}.information`) },

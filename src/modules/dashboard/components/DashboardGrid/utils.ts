@@ -19,23 +19,23 @@ function isOverlapping(widget: LayoutItem, otherWidget: LayoutItem) {
 }
 
 export function findNewPosition(layout: GridLayout, widget: LayoutItem, lastBreakpoint: number) {
-  // Создаём безопасную от мутаций копию объекта с нулевыми координатами
+  // Create a mutation-safe copy of an object with zero coordinates
   const safeWidget = { ...widget, x: 0, y: 0 }
-  // Получаем список виджетов, с которыми может пересекаться виджет
+  // Get a list of widgets that the widget can intersect with
   const widgets = layout.filter(w => w.i !== safeWidget.i)
 
-  // Перемещаем виджет вправо, пока не найдем подходящее местоположение (без пересечения с другими виджетами)
+  // Move the widget to the right until you find a suitable location (without intersecting with other widgets)
   while (widgets.some(w => isOverlapping(safeWidget, w))) {
     safeWidget.x++
     if (safeWidget.x + safeWidget.w > lastBreakpoint) {
-      // Если виджет не помещается в новом положении по ширине, сбросить положение по оси X и перейти ниже по оси Y
+      // If the widget does not fit in the new width position, reset the X position and move down the Y axis
       safeWidget.x = 0
       safeWidget.y++
     }
-    if (safeWidget.y + safeWidget.h > Infinity) break // Если виджет не помещается в новом положении, выйти из цикла
+    if (safeWidget.y + safeWidget.h > Infinity) break // If the widget does not fit in the new position, exit the loop
   }
 
-  // Возвращаем новое местоположение виджета
+  // Returning the new location of the widget
   return { x: safeWidget.x, y: safeWidget.y }
 }
 

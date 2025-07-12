@@ -43,22 +43,22 @@ const units = {
   },
 } as const
 
-/** Конвертирует число в байтах в определённую единицу измерения, учитывая текущую локализацию
+/** Converts a number in bytes to a specific unit of measurement, taking into account the current locale.
  *
- * **NOTE:** Используется только для отображения в HTML
- * @param bytes число в байтах
- * @param props дополнительные опции
- * @param props.precision точность округления
- * @param props.exactUnit конкретная единица измерения
- * @param props.withoutUnit отображение единицы измерения в возвращаемой строке
- * @return строка с указанным размером
+ * **NOTE:** Used for HTML display only.
+ * @param bytes number in bytes
+ * @param props additional options
+ * @param props.precision rounding accuracy
+ * @param props.exactUnit specific unit of measurement
+ * @param props.withoutUnit display unit of measurement in the returned string
+ * @return string with specified size
  * @example
  * // locale = "ru"
- * bytesToSize(1000000000) // => "1 ГБ"
- * bytesToSize(32000000) // => "32 МБ"
- * bytesToSize(5432342355430) // => "5.43 ТБ"
- * bytesToSize(5432342355430, {precision: 0}) // => "5 ТБ"
- * bytesToSize(5432342355430, {exactUnit: "G"}) // => "5432.34 ГБ"
+ * bytesToSize(1000000000) // => "1 GB"
+ * bytesToSize(32000000) // => "32 MB"
+ * bytesToSize(5432342355430) // => "5.43 TB"
+ * bytesToSize(5432342355430, {precision: 0}) // => "5 TB"
+ * bytesToSize(5432342355430, {exactUnit: "G"}) // => "5432.34 GB"
  * bytesToSize(5432342355430, {withoutUnit: true}) // => "5.43"
  * // locale = 'en'
  * bytesToSize(1000000000) // => "1 GB"
@@ -90,10 +90,10 @@ export function bytesToSize(
   return `${floor(num, precision)}${withoutUnit ? '' : ` ${unit}`}`
 }
 
-/** Конвертирует размер в байты
- * @param size размер в байтах
- * @param unit единица измерения
- * @return число в байтах
+/** Converts size to bytes
+ * @param size size in bytes
+ * @param unit unit of measurement
+ * @return number in bytes
  * @example
  * sizeToBytes(4, "G") // => 4000000000
  * sizeToBytes(1.6, "T") // => 1600000000000
@@ -102,12 +102,12 @@ export function sizeToBytes(size: number, unit: keyof typeof powMultiplier) {
   return round(Math.pow(notationMultiplier[notation], powMultiplier[unit]) * size)
 }
 
-/** Возвращает единицу измерения, в которой следует отображать количество байт для удобной читаемости
+/** Returns the unit in which to display the number of bytes for easier reading.
  *
- * **NOTE:** Используется для передачи в bytesToSize в props.exactUnit
- * @param bytes число в байтах
- * @param allow массив с разрешенными единицами измерения
- * @return строку единицу измерения
+ * **NOTE:** Used to transfer to bytesToSize в props.exactUnit
+ * @param bytes number in bytes
+ * @param allow array of allowed units of measurement
+ * @return string unit of measure
  * @example
  *  bytesToUnit(1600000000000) // => "T"
  *  bytesToUnit(1600000000000, ["M", "G"]) // => "G"
@@ -129,15 +129,15 @@ export function bytesToUnit<T extends (keyof typeof powMultiplier)[]>(bytes?: nu
   return powMultiplier[i] as ArrayElement<T>
 }
 
-/** Переводит единицу отображения размера в читаемую строку
+/** Converts the size display unit to a readable string
  *
- * **NOTE:** Используется только для отображения в HTML
- * @param unit единица измерения
- * @return строка с переведённой единицей измерения
+ * **NOTE:** Used for HTML display only.
+ * @param unit unit of measurement
+ * @return string with the converted unit of measurement
  * @example
- * // locale="ru"
- * sizeUnitTranslate("M") // => "МБ"
- * sizeUnitTranslate("G") // => "ГБ"
+ * // locale="fr"
+ * sizeUnitTranslate("M") // => "MB"
+ * sizeUnitTranslate("G") // => "GB"
  * // locale="en"
  * sizeUnitTranslate("M") // => "MB"
  * sizeUnitTranslate("G") // => "GB" */

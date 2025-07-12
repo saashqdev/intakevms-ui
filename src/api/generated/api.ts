@@ -300,10 +300,10 @@ export interface BridgeCreate {
   type: string
   /**
    *
-   * @type {Array<OpenvairModulesNetworkEntrypointsSchemasInterface>}
+   * @type {Array<IntakevmsModulesNetworkEntrypointsSchemasInterface>}
    * @memberof BridgeCreate
    */
-  interfaces: Array<OpenvairModulesNetworkEntrypointsSchemasInterface>
+  interfaces: Array<IntakevmsModulesNetworkEntrypointsSchemasInterface>
   /**
    *
    * @type {string}
@@ -386,10 +386,10 @@ export interface BridgeCreateResponse {
 export interface BridgeDelete {
   /**
    *
-   * @type {Array<OpenvairModulesNetworkEntrypointsSchemasInterface>}
+   * @type {Array<IntakevmsModulesNetworkEntrypointsSchemasInterface>}
    * @memberof BridgeDelete
    */
-  data: Array<OpenvairModulesNetworkEntrypointsSchemasInterface>
+  data: Array<IntakevmsModulesNetworkEntrypointsSchemasInterface>
 }
 /**
  * Pydantic model representing a CSV file response.  Attributes:     filename (str): The name of the CSV file.     content_type (str): The content type of the file, typically \'text/csv\'.     content (List[Event]): A list of events to be included in the CSV file.
@@ -1318,10 +1318,10 @@ export interface Image {
   user_id?: string
   /**
    *
-   * @type {Array<OpenvairModulesImageEntrypointsSchemasAttachment>}
+   * @type {Array<IntakevmsModulesImageEntrypointsSchemasAttachment>}
    * @memberof Image
    */
-  attachments?: Array<OpenvairModulesImageEntrypointsSchemasAttachment>
+  attachments?: Array<IntakevmsModulesImageEntrypointsSchemasAttachment>
 }
 /**
  * Represents a block device interface that has been deleted.  Attributes:     inf_type (str): The type of the block device interface.     ip (str): The IP address of the block device interface.
@@ -1654,7 +1654,7 @@ export interface NfsStorageExtraSpecsInfo {
   mount_point?: string
 }
 /**
- * Aggregates node metrics into a comprehensive representation.  Attributes:     cpu (CpuData): CPU usage data.     memory (MemoryData): Memory usage data.     storage (StoragesData): Storage usage data.     iops (IopsData): IOPS data.     io_latency (IOLatency): IO latency data.     bandwith_data (BandWithData): Bandwidth usage data.     disk_data (DiskInfo): Disk read/write data.
+ * Aggregates node metrics into a comprehensive representation.  Attributes:     cpu (CpuData): CPU usage data.     memory (MemoryData): Memory usage data.     storage (StoragesData): Storage usage data.     iops (IopsData): IOPS data.     io_latency (IOLatency): IO latency data.     bandwidth_data (BandWithData): Bandwidth usage data.     disk_data (DiskInfo): Disk read/write data.
  * @export
  * @interface NodeInfo
  */
@@ -1694,13 +1694,13 @@ export interface NodeInfo {
    * @type {BandWithData}
    * @memberof NodeInfo
    */
-  bandwith_data: BandWithData
+  bandwidth_data: BandWithData
   /**
    *
-   * @type {OpenvairModulesDashboardEntrypointsSchemasDiskInfo}
+   * @type {IntakevmsModulesDashboardEntrypointsSchemasDiskInfo}
    * @memberof NodeInfo
    */
-  disk_data: OpenvairModulesDashboardEntrypointsSchemasDiskInfo
+  disk_data: IntakevmsModulesDashboardEntrypointsSchemasDiskInfo
 }
 /**
  *
@@ -1736,440 +1736,440 @@ export interface Notification {
 /**
  * Represents general information about a block device interface.  Attributes:     inf_type (str): The type of the block device interface.     ip (str): The IP address of the block device interface.     port (Optional[str]): The port number of the block device interface.
  * @export
- * @interface OpenvairModulesBlockDeviceEntrypointsSchemasInterface
+ * @interface IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
  */
-export interface OpenvairModulesBlockDeviceEntrypointsSchemasInterface {
+export interface IntakevmsModulesBlockDeviceEntrypointsSchemasInterface {
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesBlockDeviceEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
    */
   inf_type: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesBlockDeviceEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
    */
   ip: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesBlockDeviceEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
    */
   port?: string
 }
 /**
  * Represents disk read/write data.  Attributes:     read (float): The amount of data read from the disk.     write (float): The amount of data written to the disk.     date (int): The timestamp of the disk data.
  * @export
- * @interface OpenvairModulesDashboardEntrypointsSchemasDiskInfo
+ * @interface IntakevmsModulesDashboardEntrypointsSchemasDiskInfo
  */
-export interface OpenvairModulesDashboardEntrypointsSchemasDiskInfo {
+export interface IntakevmsModulesDashboardEntrypointsSchemasDiskInfo {
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesDashboardEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesDashboardEntrypointsSchemasDiskInfo
    */
   read: number
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesDashboardEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesDashboardEntrypointsSchemasDiskInfo
    */
   write: number
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesDashboardEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesDashboardEntrypointsSchemasDiskInfo
    */
   date: number
 }
 /**
  *
  * @export
- * @interface OpenvairModulesImageEntrypointsSchemasAttachImage
+ * @interface IntakevmsModulesImageEntrypointsSchemasAttachImage
  */
-export interface OpenvairModulesImageEntrypointsSchemasAttachImage {
+export interface IntakevmsModulesImageEntrypointsSchemasAttachImage {
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesImageEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesImageEntrypointsSchemasAttachImage
    */
   vm_id: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesImageEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesImageEntrypointsSchemasAttachImage
    */
   target?: string
 }
 /**
  *
  * @export
- * @interface OpenvairModulesImageEntrypointsSchemasAttachment
+ * @interface IntakevmsModulesImageEntrypointsSchemasAttachment
  */
-export interface OpenvairModulesImageEntrypointsSchemasAttachment {
+export interface IntakevmsModulesImageEntrypointsSchemasAttachment {
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesImageEntrypointsSchemasAttachment
+   * @memberof IntakevmsModulesImageEntrypointsSchemasAttachment
    */
   id: number
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesImageEntrypointsSchemasAttachment
+   * @memberof IntakevmsModulesImageEntrypointsSchemasAttachment
    */
   vm_id: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesImageEntrypointsSchemasAttachment
+   * @memberof IntakevmsModulesImageEntrypointsSchemasAttachment
    */
   target?: string
 }
 /**
  * Schema representing a network interface.  Attributes:     id (str): The unique identifier of the interface.     name (str): The name of the interface.     mac (str): The MAC address of the interface.     ip (Optional[str]): The IP address of the interface.     netmask (Optional[str]): The netmask of the interface.     inf_type (str): The type of the interface (e.g., physical, virtual).     power_state (str): The power state of the interface (e.g., on, off).     status (Optional[str]): The status of the interface.     mtu (Optional[int]): The Maximum Transmission Unit size.     speed (Optional[int]): The speed of the interface.     interface_extra_specs (Optional[InterfaceExtraSpecs]): Additional         specifications for the interface.
  * @export
- * @interface OpenvairModulesNetworkEntrypointsSchemasInterface
+ * @interface IntakevmsModulesNetworkEntrypointsSchemasInterface
  */
-export interface OpenvairModulesNetworkEntrypointsSchemasInterface {
+export interface IntakevmsModulesNetworkEntrypointsSchemasInterface {
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   id: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   name: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   mac: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   ip?: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   netmask?: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   inf_type: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   power_state: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   status?: string
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   mtu?: number
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   speed?: number
   /**
    *
    * @type {InterfaceExtraSpecs}
-   * @memberof OpenvairModulesNetworkEntrypointsSchemasInterface
+   * @memberof IntakevmsModulesNetworkEntrypointsSchemasInterface
    */
   interface_extra_specs?: InterfaceExtraSpecs
 }
 /**
  *
  * @export
- * @interface OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+ * @interface IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
  */
-export interface OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage {
+export interface IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage {
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
    */
   name?: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
    */
-  emulation?: OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum
+  emulation?: IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
    */
-  format?: OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum
+  format?: IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum
   /**
    *
    * @type {QOS}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
    */
   qos: QOS
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
    */
   boot_order: number
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
    */
   order: number
   /**
    *
    * @type {boolean}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
    */
   read_only?: boolean
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImage
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImage
    */
   image_id: string
 }
 
-export const OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum = {
+export const IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum = {
   Virtio: 'virtio',
   Ide: 'ide',
   Scsi: 'scsi',
 } as const
 
-export type OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum =
-  (typeof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum)[keyof typeof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum]
-export const OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum = {
+export type IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum =
+  (typeof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum)[keyof typeof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageEmulationEnum]
+export const IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum = {
   Qcow2: 'qcow2',
   Raw: 'raw',
 } as const
 
-export type OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum =
-  (typeof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum)[keyof typeof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum]
+export type IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum =
+  (typeof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum)[keyof typeof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachImageFormatEnum]
 
 /**
  *
  * @export
- * @interface OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+ * @interface IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
  */
-export interface OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume {
+export interface IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume {
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
    */
   name?: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
    */
-  emulation?: OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum
+  emulation?: IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
    */
-  format?: OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum
+  format?: IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum
   /**
    *
    * @type {QOS}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
    */
   qos: QOS
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
    */
   boot_order: number
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
    */
   order: number
   /**
    *
    * @type {boolean}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
    */
   read_only?: boolean
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolume
    */
   volume_id: string
 }
 
-export const OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum = {
+export const IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum = {
   Virtio: 'virtio',
   Ide: 'ide',
   Scsi: 'scsi',
 } as const
 
-export type OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum =
-  (typeof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum)[keyof typeof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum]
-export const OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum = {
+export type IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum =
+  (typeof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum)[keyof typeof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeEmulationEnum]
+export const IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum = {
   Qcow2: 'qcow2',
   Raw: 'raw',
 } as const
 
-export type OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum =
-  (typeof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum)[keyof typeof OpenvairModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum]
+export type IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum =
+  (typeof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum)[keyof typeof IntakevmsModulesVirtualMachinesEntrypointsSchemasAttachVolumeFormatEnum]
 
 /**
  *
  * @export
- * @interface OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+ * @interface IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
  */
-export interface OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo {
+export interface IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo {
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   id: number
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   name?: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   emulation?: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   format?: string
   /**
    *
    * @type {QOS}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   qos?: QOS
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   boot_order?: number
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   order?: number
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   path?: string
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   size?: number
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   provisioning?: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   disk_id?: string
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   type?: number
   /**
    *
    * @type {boolean}
-   * @memberof OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo
+   * @memberof IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo
    */
   read_only?: boolean
 }
 /**
  *
  * @export
- * @interface OpenvairModulesVolumeEntrypointsSchemasAttachVolume
+ * @interface IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
  */
-export interface OpenvairModulesVolumeEntrypointsSchemasAttachVolume {
+export interface IntakevmsModulesVolumeEntrypointsSchemasAttachVolume {
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVolumeEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
    */
   vm_id: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVolumeEntrypointsSchemasAttachVolume
+   * @memberof IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
    */
   target?: string
 }
 /**
  *
  * @export
- * @interface OpenvairModulesVolumeEntrypointsSchemasAttachment
+ * @interface IntakevmsModulesVolumeEntrypointsSchemasAttachment
  */
-export interface OpenvairModulesVolumeEntrypointsSchemasAttachment {
+export interface IntakevmsModulesVolumeEntrypointsSchemasAttachment {
   /**
    *
    * @type {number}
-   * @memberof OpenvairModulesVolumeEntrypointsSchemasAttachment
+   * @memberof IntakevmsModulesVolumeEntrypointsSchemasAttachment
    */
   id: number
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVolumeEntrypointsSchemasAttachment
+   * @memberof IntakevmsModulesVolumeEntrypointsSchemasAttachment
    */
   vm_id: string
   /**
    *
    * @type {string}
-   * @memberof OpenvairModulesVolumeEntrypointsSchemasAttachment
+   * @memberof IntakevmsModulesVolumeEntrypointsSchemasAttachment
    */
   target?: string
 }
@@ -2301,10 +2301,10 @@ export interface PageImage {
 export interface PageInterface {
   /**
    *
-   * @type {Array<OpenvairModulesNetworkEntrypointsSchemasInterface>}
+   * @type {Array<IntakevmsModulesNetworkEntrypointsSchemasInterface>}
    * @memberof PageInterface
    */
-  items: Array<OpenvairModulesNetworkEntrypointsSchemasInterface>
+  items: Array<IntakevmsModulesNetworkEntrypointsSchemasInterface>
   /**
    *
    * @type {number}
@@ -3016,10 +3016,10 @@ export interface VirtualMachineInfo {
   graphic_interface: GraphicInterfaceInfo
   /**
    *
-   * @type {Array<OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo>}
+   * @type {Array<IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo>}
    * @memberof VirtualMachineInfo
    */
-  disks: Array<OpenvairModulesVirtualMachinesEntrypointsSchemasDiskInfo>
+  disks: Array<IntakevmsModulesVirtualMachinesEntrypointsSchemasDiskInfo>
   /**
    *
    * @type {Array<VirtualInterfaceInfo>}
@@ -3212,10 +3212,10 @@ export interface Volume {
   information?: string
   /**
    *
-   * @type {Array<OpenvairModulesVolumeEntrypointsSchemasAttachment>}
+   * @type {Array<IntakevmsModulesVolumeEntrypointsSchemasAttachment>}
    * @memberof Volume
    */
-  attachments: Array<OpenvairModulesVolumeEntrypointsSchemasAttachment>
+  attachments: Array<IntakevmsModulesVolumeEntrypointsSchemasAttachment>
   /**
    *
    * @type {boolean}
@@ -3677,19 +3677,19 @@ export const BlockDevicesApiAxiosParamCreator = function (configuration?: Config
     /**
      * Log in to the specified iSCSI target.  Args:     data (schemas.Interface): The data required for the login operation,         such as target details, authentication credentials, etc.     user_data (Dict, optional): Additional user data to be included in the         request.         Defaults to `Depends(get_current_user)`.     crud (InterfaceCrud, optional): An instance of the `InterfaceCrud`         interface that provides access to the necessary data for the login         operation. Defaults to `Depends(InterfaceCrud)`.  Returns:     schemas.InterfaceLogin: A `schemas.InterfaceLogin` object containing the         result of the login operation.  Raises:     HTTPException: If there is an error while logging in to the iSCSI         target, this function raises an `HTTPException` with an appropriate         status code and error message.
      * @summary Login
-     * @param {OpenvairModulesBlockDeviceEntrypointsSchemasInterface} openvairModulesBlockDeviceEntrypointsSchemasInterface
+     * @param {IntakevmsModulesBlockDeviceEntrypointsSchemasInterface} intakevmsModulesBlockDeviceEntrypointsSchemasInterface
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     loginBlockDevicesLoginPost: async (
-      openvairModulesBlockDeviceEntrypointsSchemasInterface: OpenvairModulesBlockDeviceEntrypointsSchemasInterface,
+      intakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface,
       options: RawAxiosRequestConfig = {}
     ): Promise<RequestArgs> => {
-      // verify required parameter 'openvairModulesBlockDeviceEntrypointsSchemasInterface' is not null or undefined
+      // verify required parameter 'intakevmsModulesBlockDeviceEntrypointsSchemasInterface' is not null or undefined
       assertParamExists(
         'loginBlockDevicesLoginPost',
-        'openvairModulesBlockDeviceEntrypointsSchemasInterface',
-        openvairModulesBlockDeviceEntrypointsSchemasInterface
+        'intakevmsModulesBlockDeviceEntrypointsSchemasInterface',
+        intakevmsModulesBlockDeviceEntrypointsSchemasInterface
       )
       const localVarPath = `/block-devices/login`
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -3713,7 +3713,7 @@ export const BlockDevicesApiAxiosParamCreator = function (configuration?: Config
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
       localVarRequestOptions.data = serializeDataIfNeeded(
-        openvairModulesBlockDeviceEntrypointsSchemasInterface,
+        intakevmsModulesBlockDeviceEntrypointsSchemasInterface,
         localVarRequestOptions,
         configuration
       )
@@ -3837,16 +3837,16 @@ export const BlockDevicesApiFp = function (configuration?: Configuration) {
     /**
      * Log in to the specified iSCSI target.  Args:     data (schemas.Interface): The data required for the login operation,         such as target details, authentication credentials, etc.     user_data (Dict, optional): Additional user data to be included in the         request.         Defaults to `Depends(get_current_user)`.     crud (InterfaceCrud, optional): An instance of the `InterfaceCrud`         interface that provides access to the necessary data for the login         operation. Defaults to `Depends(InterfaceCrud)`.  Returns:     schemas.InterfaceLogin: A `schemas.InterfaceLogin` object containing the         result of the login operation.  Raises:     HTTPException: If there is an error while logging in to the iSCSI         target, this function raises an `HTTPException` with an appropriate         status code and error message.
      * @summary Login
-     * @param {OpenvairModulesBlockDeviceEntrypointsSchemasInterface} openvairModulesBlockDeviceEntrypointsSchemasInterface
+     * @param {IntakevmsModulesBlockDeviceEntrypointsSchemasInterface} intakevmsModulesBlockDeviceEntrypointsSchemasInterface
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async loginBlockDevicesLoginPost(
-      openvairModulesBlockDeviceEntrypointsSchemasInterface: OpenvairModulesBlockDeviceEntrypointsSchemasInterface,
+      intakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface,
       options?: RawAxiosRequestConfig
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InterfaceLogin>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.loginBlockDevicesLoginPost(
-        openvairModulesBlockDeviceEntrypointsSchemasInterface,
+        intakevmsModulesBlockDeviceEntrypointsSchemasInterface,
         options
       )
       const index = configuration?.serverIndex ?? 0
@@ -3934,7 +3934,7 @@ export const BlockDevicesApiFactory = function (
       options?: RawAxiosRequestConfig
     ): AxiosPromise<InterfaceLogin> {
       return localVarFp
-        .loginBlockDevicesLoginPost(requestParameters.openvairModulesBlockDeviceEntrypointsSchemasInterface, options)
+        .loginBlockDevicesLoginPost(requestParameters.intakevmsModulesBlockDeviceEntrypointsSchemasInterface, options)
         .then(request => request(axios, basePath))
     },
     /**
@@ -3963,10 +3963,10 @@ export const BlockDevicesApiFactory = function (
 export interface BlockDevicesApiLoginBlockDevicesLoginPostRequest {
   /**
    *
-   * @type {OpenvairModulesBlockDeviceEntrypointsSchemasInterface}
+   * @type {IntakevmsModulesBlockDeviceEntrypointsSchemasInterface}
    * @memberof BlockDevicesApiLoginBlockDevicesLoginPost
    */
-  readonly openvairModulesBlockDeviceEntrypointsSchemasInterface: OpenvairModulesBlockDeviceEntrypointsSchemasInterface
+  readonly intakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
 }
 
 /**
@@ -4042,7 +4042,7 @@ export class BlockDevicesApi extends BaseAPI {
     options?: RawAxiosRequestConfig
   ) {
     return BlockDevicesApiFp(this.configuration)
-      .loginBlockDevicesLoginPost(requestParameters.openvairModulesBlockDeviceEntrypointsSchemasInterface, options)
+      .loginBlockDevicesLoginPost(requestParameters.intakevmsModulesBlockDeviceEntrypointsSchemasInterface, options)
       .then(request => request(this.axios, this.basePath))
   }
 
@@ -4572,22 +4572,22 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
      * Attach an image to a VM  The first line of the function is a docstring. This is a string that describes what the function does. It\'s a good idea to include a docstring for every function you write  Args:     image_id (str): str - the id of the image to be attached     data (str): str - the id of the VM to which the image will be attached     user_info: The dependency that check user was authorised     crud: This is the dependency that we created in the previous section.  Returns:     schemas.AttachImageInfo: The attached image.
      * @summary Attach Image
      * @param {string} imageId Image id (UUID4)
-     * @param {OpenvairModulesImageEntrypointsSchemasAttachImage} openvairModulesImageEntrypointsSchemasAttachImage
+     * @param {IntakevmsModulesImageEntrypointsSchemasAttachImage} intakevmsModulesImageEntrypointsSchemasAttachImage
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     attachImageImagesImageIdAttachPost: async (
       imageId: string,
-      openvairModulesImageEntrypointsSchemasAttachImage: OpenvairModulesImageEntrypointsSchemasAttachImage,
+      intakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage,
       options: RawAxiosRequestConfig = {}
     ): Promise<RequestArgs> => {
       // verify required parameter 'imageId' is not null or undefined
       assertParamExists('attachImageImagesImageIdAttachPost', 'imageId', imageId)
-      // verify required parameter 'openvairModulesImageEntrypointsSchemasAttachImage' is not null or undefined
+      // verify required parameter 'intakevmsModulesImageEntrypointsSchemasAttachImage' is not null or undefined
       assertParamExists(
         'attachImageImagesImageIdAttachPost',
-        'openvairModulesImageEntrypointsSchemasAttachImage',
-        openvairModulesImageEntrypointsSchemasAttachImage
+        'intakevmsModulesImageEntrypointsSchemasAttachImage',
+        intakevmsModulesImageEntrypointsSchemasAttachImage
       )
       const localVarPath = `/images/{image_id}/attach/`.replace(`{${'image_id'}}`, encodeURIComponent(String(imageId)))
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -4611,7 +4611,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
       localVarRequestOptions.data = serializeDataIfNeeded(
-        openvairModulesImageEntrypointsSchemasAttachImage,
+        intakevmsModulesImageEntrypointsSchemasAttachImage,
         localVarRequestOptions,
         configuration
       )
@@ -4869,18 +4869,18 @@ export const ImageApiFp = function (configuration?: Configuration) {
      * Attach an image to a VM  The first line of the function is a docstring. This is a string that describes what the function does. It\'s a good idea to include a docstring for every function you write  Args:     image_id (str): str - the id of the image to be attached     data (str): str - the id of the VM to which the image will be attached     user_info: The dependency that check user was authorised     crud: This is the dependency that we created in the previous section.  Returns:     schemas.AttachImageInfo: The attached image.
      * @summary Attach Image
      * @param {string} imageId Image id (UUID4)
-     * @param {OpenvairModulesImageEntrypointsSchemasAttachImage} openvairModulesImageEntrypointsSchemasAttachImage
+     * @param {IntakevmsModulesImageEntrypointsSchemasAttachImage} intakevmsModulesImageEntrypointsSchemasAttachImage
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async attachImageImagesImageIdAttachPost(
       imageId: string,
-      openvairModulesImageEntrypointsSchemasAttachImage: OpenvairModulesImageEntrypointsSchemasAttachImage,
+      intakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage,
       options?: RawAxiosRequestConfig
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AttachImageInfo>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.attachImageImagesImageIdAttachPost(
         imageId,
-        openvairModulesImageEntrypointsSchemasAttachImage,
+        intakevmsModulesImageEntrypointsSchemasAttachImage,
         options
       )
       const index = configuration?.serverIndex ?? 0
@@ -5049,7 +5049,7 @@ export const ImageApiFactory = function (configuration?: Configuration, basePath
       return localVarFp
         .attachImageImagesImageIdAttachPost(
           requestParameters.imageId,
-          requestParameters.openvairModulesImageEntrypointsSchemasAttachImage,
+          requestParameters.intakevmsModulesImageEntrypointsSchemasAttachImage,
           options
         )
         .then(request => request(axios, basePath))
@@ -5153,10 +5153,10 @@ export interface ImageApiAttachImageImagesImageIdAttachPostRequest {
 
   /**
    *
-   * @type {OpenvairModulesImageEntrypointsSchemasAttachImage}
+   * @type {IntakevmsModulesImageEntrypointsSchemasAttachImage}
    * @memberof ImageApiAttachImageImagesImageIdAttachPost
    */
-  readonly openvairModulesImageEntrypointsSchemasAttachImage: OpenvairModulesImageEntrypointsSchemasAttachImage
+  readonly intakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage
 }
 
 /**
@@ -5293,7 +5293,7 @@ export class ImageApi extends BaseAPI {
     return ImageApiFp(this.configuration)
       .attachImageImagesImageIdAttachPost(
         requestParameters.imageId,
-        requestParameters.openvairModulesImageEntrypointsSchemasAttachImage,
+        requestParameters.intakevmsModulesImageEntrypointsSchemasAttachImage,
         options
       )
       .then(request => request(this.axios, this.basePath))
@@ -10007,22 +10007,22 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
      * It takes a volume_id and a data object, and then it calls the attach_volume method on the scheduler manager  Args:     volume_id (str): The ID of the volume to be attached.     data (schemas.AttachVolume): schemas.AttachVolume     user_info: The dependency that check user was authorized     crud: This is the dependency that we created in the previous section.  Returns:     The return value is a JSONResponse object.
      * @summary Attach Volume
      * @param {string} volumeId Volume id (UUID4)
-     * @param {OpenvairModulesVolumeEntrypointsSchemasAttachVolume} openvairModulesVolumeEntrypointsSchemasAttachVolume
+     * @param {IntakevmsModulesVolumeEntrypointsSchemasAttachVolume} intakevmsModulesVolumeEntrypointsSchemasAttachVolume
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     attachVolumeVolumesVolumeIdAttachPost: async (
       volumeId: string,
-      openvairModulesVolumeEntrypointsSchemasAttachVolume: OpenvairModulesVolumeEntrypointsSchemasAttachVolume,
+      intakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
       options: RawAxiosRequestConfig = {}
     ): Promise<RequestArgs> => {
       // verify required parameter 'volumeId' is not null or undefined
       assertParamExists('attachVolumeVolumesVolumeIdAttachPost', 'volumeId', volumeId)
-      // verify required parameter 'openvairModulesVolumeEntrypointsSchemasAttachVolume' is not null or undefined
+      // verify required parameter 'intakevmsModulesVolumeEntrypointsSchemasAttachVolume' is not null or undefined
       assertParamExists(
         'attachVolumeVolumesVolumeIdAttachPost',
-        'openvairModulesVolumeEntrypointsSchemasAttachVolume',
-        openvairModulesVolumeEntrypointsSchemasAttachVolume
+        'intakevmsModulesVolumeEntrypointsSchemasAttachVolume',
+        intakevmsModulesVolumeEntrypointsSchemasAttachVolume
       )
       const localVarPath = `/volumes/{volume_id}/attach/`.replace(
         `{${'volume_id'}}`,
@@ -10049,7 +10049,7 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
       localVarRequestOptions.data = serializeDataIfNeeded(
-        openvairModulesVolumeEntrypointsSchemasAttachVolume,
+        intakevmsModulesVolumeEntrypointsSchemasAttachVolume,
         localVarRequestOptions,
         configuration
       )
@@ -10392,18 +10392,18 @@ export const VolumeApiFp = function (configuration?: Configuration) {
      * It takes a volume_id and a data object, and then it calls the attach_volume method on the scheduler manager  Args:     volume_id (str): The ID of the volume to be attached.     data (schemas.AttachVolume): schemas.AttachVolume     user_info: The dependency that check user was authorized     crud: This is the dependency that we created in the previous section.  Returns:     The return value is a JSONResponse object.
      * @summary Attach Volume
      * @param {string} volumeId Volume id (UUID4)
-     * @param {OpenvairModulesVolumeEntrypointsSchemasAttachVolume} openvairModulesVolumeEntrypointsSchemasAttachVolume
+     * @param {IntakevmsModulesVolumeEntrypointsSchemasAttachVolume} intakevmsModulesVolumeEntrypointsSchemasAttachVolume
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async attachVolumeVolumesVolumeIdAttachPost(
       volumeId: string,
-      openvairModulesVolumeEntrypointsSchemasAttachVolume: OpenvairModulesVolumeEntrypointsSchemasAttachVolume,
+      intakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
       options?: RawAxiosRequestConfig
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AttachVolumeInfo>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.attachVolumeVolumesVolumeIdAttachPost(
         volumeId,
-        openvairModulesVolumeEntrypointsSchemasAttachVolume,
+        intakevmsModulesVolumeEntrypointsSchemasAttachVolume,
         options
       )
       const index = configuration?.serverIndex ?? 0
@@ -10624,7 +10624,7 @@ export const VolumeApiFactory = function (configuration?: Configuration, basePat
       return localVarFp
         .attachVolumeVolumesVolumeIdAttachPost(
           requestParameters.volumeId,
-          requestParameters.openvairModulesVolumeEntrypointsSchemasAttachVolume,
+          requestParameters.intakevmsModulesVolumeEntrypointsSchemasAttachVolume,
           options
         )
         .then(request => request(axios, basePath))
@@ -10758,10 +10758,10 @@ export interface VolumeApiAttachVolumeVolumesVolumeIdAttachPostRequest {
 
   /**
    *
-   * @type {OpenvairModulesVolumeEntrypointsSchemasAttachVolume}
+   * @type {IntakevmsModulesVolumeEntrypointsSchemasAttachVolume}
    * @memberof VolumeApiAttachVolumeVolumesVolumeIdAttachPost
    */
-  readonly openvairModulesVolumeEntrypointsSchemasAttachVolume: OpenvairModulesVolumeEntrypointsSchemasAttachVolume
+  readonly intakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
 }
 
 /**
@@ -10926,7 +10926,7 @@ export class VolumeApi extends BaseAPI {
     return VolumeApiFp(this.configuration)
       .attachVolumeVolumesVolumeIdAttachPost(
         requestParameters.volumeId,
-        requestParameters.openvairModulesVolumeEntrypointsSchemasAttachVolume,
+        requestParameters.intakevmsModulesVolumeEntrypointsSchemasAttachVolume,
         options
       )
       .then(request => request(this.axios, this.basePath))

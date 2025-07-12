@@ -27,8 +27,8 @@ export const VMCardDisksTab = defineComponent({
           const volume = find(this.volumes, { id: v.disk_id })
           const storage = find(this.storages, { id: volume?.storage_id })
           if (!volume || !storage) return null
-          // TODO: ссылка на страницу хранилища
-          // TODO: ссылка на страницу диска
+          // TODO: link to repository page
+          // TODO: link to disc page
           return (
             <div
               style={{

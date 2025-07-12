@@ -1,6 +1,6 @@
-import type { LocalDisk, OpenvairModulesNetworkEntrypointsSchemasInterface } from '@api/generated'
+import type { LocalDisk, IntakevmsModulesNetworkEntrypointsSchemasInterface } from '@api/generated'
 
-export type Interface = OpenvairModulesNetworkEntrypointsSchemasInterface
+export type Interface = IntakevmsModulesNetworkEntrypointsSchemasInterface
 
 export type Bridge = {
   address: string

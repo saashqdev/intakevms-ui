@@ -23,7 +23,7 @@ type ActionContext = AugmentedActionContext<State>
 
 const NOTIFICATIONS_URL = {
   base: `${BASE_URL.split(':').length >= 3 ? dropRight(BASE_URL.split(':')).join(':') + ':9090' : BASE_URL}`,
-  storage: '/api/v1/query?query=sum(node_filesystem_avail_bytes{mountpoint=~"/opt/aero/aistov/data/mnt.*"})',
+  storage: '/api/v1/query?query=sum(node_filesystem_avail_bytes{mountpoint=~"/opt/virtman/homer/data/mnt.*"})',
   ram: '/api/v1/query?query=node_memory_MemAvailable_bytes',
   cpu: '/api/v1/query?query=100-(avg by (instance)(rate(node_cpu_seconds_total[5m]))*100)',
 }

@@ -84,7 +84,7 @@ export const tabs = (): TabsPropType => [
             label: 'BIOS',
             options: ['LEGACY', 'UEFI'].map(i => ({ value: i, label: i })),
             validation: 'required',
-            placeholder: 'Выберите BIOS',
+            placeholder: 'Select BIOS',
             // // disabled: vm?.state.state === 1,
             style: { width: '31.5%' },
           },
@@ -102,7 +102,7 @@ export const tabs = (): TabsPropType => [
             type: 'select',
             name: 'graphic_interface',
             label: t(`${tPrefix}.settings.fields.graphics.label`),
-            placeholder: 'Выберите протокол доступа',
+            placeholder: 'Select access protocol',
             options: [
               { label: 'VNC', value: 'vnc' },
               // { label: 'Spice', value: 'spice' },
@@ -126,11 +126,11 @@ export const tabs = (): TabsPropType => [
           {
             type: 'select',
             name: 'cpu_type',
-            label: 'Топология',
-            placeholder: 'Выберите топологию',
+            label: 'Topology',
+            placeholder: 'Select topology',
             options: [
-              { value: 'static', label: 'Статическая' },
-              { value: 'dynamic', label: 'Динамическая' },
+              { value: 'static', label: 'Static' },
+              { value: 'dynamic', label: 'Dynamic' },
             ],
             style: { width: '31.5%' },
             validation: 'required',

@@ -15,7 +15,7 @@ import {
   VirtualNetworkApi,
 } from './generated'
 
-/** Жесткий бинд контекста(this) экземпляра класса на самого себя */
+/** Hard bind context(this) of class instance to itself */
 function selfish<T extends object>(target: T): T {
   const cache = new WeakMap()
   const handler = {

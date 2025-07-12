@@ -29,15 +29,15 @@ const unionActionTypes = [
 ]
 
 /**
- * isUninitialized - значение true указывает на то, что экшен ещё не был задиспатчен ни разу
- * isError - значение true указывает на то, что последний вызов экшена завершлися с ошибкой
- * isSuccess - значение true указывает на то, что последний вызов экшена завершился успешно
- * isInitializing - Значение true указывает, что экшен в данный момент выполняется первый раз.
- *             Это будет верно для первого диспатча, но не для последующих диспатчей.
- * isDispatching - Значение true указывает, экшен в данный момент выполняется.
- *              Это будет верно как для первого диспатча, так и для последующих.
- * error - ошибка, если последний диспатч закончился ошибкой
- * timestamp - timestamp последнего диспатча экшена, завершившегося успешно
+ * isUninitialized - the value true indicates that the action has not been dispatched yet
+ * isError - true indicates that the last call to the action failed
+ * isSuccess - a value of true indicates that the last call to the action completed successfully
+ * isInitializing - A value of true indicates that the action is currently being executed for the first time.
+ *             This will be true for the first dispatch, but not for subsequent dispatches.
+ * isDispatching - A value of true indicates that the action is currently executing.
+ *              This will be true for both the first dispatch and subsequent ones.
+ * error - error if the last dispatch ended in error
+ * timestamp - timestamp last action dispatch that ended successfully
  * */
 export type ActionStateType = {
   isUninitialized: boolean

@@ -12,13 +12,13 @@ export type LocalStorage = {
   tableColumns?: Record<string, Record<string, { visible?: boolean }>>
 }
 
-/** Возвращает значение из localStorage */
+/** Returns a value from localStorage */
 export function getLocalStorage<T extends keyof LocalStorage>(key: T): NonNullable<LocalStorage[T]> | null {
   const value = localStorage.getItem(key)
   return isJson(value) ? JSON.parse(value as string) : value
 }
 
-/** Записывает значение в localStorage */
+/** Writes a value to localStorage */
 export function setLocalStorage<T extends keyof LocalStorage>(key: T, value: LocalStorage[T] | undefined | null) {
   if (value == null) {
     return localStorage.removeItem(key)

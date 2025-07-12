@@ -9,14 +9,14 @@ import { axiosInstance } from '../axios'
 
 let refreshPromise: Promise<boolean> | undefined
 
-/** Проверяет закончился ли токен */
+/** Checks if the token has expired */
 const checkExpiresToken = (token?: string) => {
   if (!token || token === 'null') return true
   const expires = JSON.parse(window.atob(token.split('.')[1])).exp * 1000
   return expires - Date.now() < 0
 }
 
-/** Проверяет оставшееся время действия токена, если время действия меньше 5 минут, то обновляет токены */
+/** Checks the remaining token validity, if the validity is less than 5 minutes, then refreshes the tokens */
 const checkAndRefreshToken = async (token?: string) => {
   if (!token || token === 'null' || refreshPromise) return
 
@@ -26,7 +26,7 @@ const checkAndRefreshToken = async (token?: string) => {
   return refreshToken()
 }
 
-/** Запрашивает и обновляет токены */
+/** Requests and refreshes tokens */
 const refreshToken = async () => {
   if (!refreshPromise) refreshPromise = store.dispatch(AppActionTypes.REFRESH, undefined)
   const isRefreshSuccess = await refreshPromise
@@ -37,8 +37,8 @@ const refreshToken = async () => {
 
 axiosInstance.interceptors.request.use(
   req => {
-    /** Обработка любого запроса
-     * Фоновая провека времени действия токена, при необходимости обновление токена */
+    /** Processing any request
+     * Background check of token validity period, token update if necessary */
     if (!req.url?.includes('/auth/refresh')) checkAndRefreshToken(`${req.headers.Authorization}`?.split(' ')[1])
     return req
   },
@@ -48,7 +48,7 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
   res => res,
   async (err: AxiosError<{ message: string }>) => {
-    /** Обработка ошибки запроса на обновление токена */
+    /** Handling Token Refresh Request Error */
     if (err.response?.config.url?.includes('/auth/refresh')) {
       if (
         !store.state.app.auth.token ||
@@ -60,8 +60,8 @@ axiosInstance.interceptors.response.use(
       throw new AxiosError(err.message, err.code, err.config, err.request, err.response)
     }
 
-    /** Обработка ошибки любого запроса по причине невалидного токена доступа
-     * При успешном обновлении токена исходный запрос повторяется */
+    /** Handling any request error due to invalid access token
+     * If the token is successfully refreshed, the original request is repeated. */
     if (err.response?.status === 401) {
       const isRefreshSuccess = await refreshToken()
       if (!isRefreshSuccess) return err
@@ -72,7 +72,7 @@ axiosInstance.interceptors.response.use(
       return axiosInstance(config)
     }
 
-    /** Обработка всех ошибок, кроме GET и OPTIONS запросов */
+    /** Handling all errors except GET and OPTIONS requests */
     if (!['get', 'options'].includes(`${err.config?.method?.toLowerCase()}`))
       useSnackbar().openSnackbar(extractErrorSnackbarProps(err))
 

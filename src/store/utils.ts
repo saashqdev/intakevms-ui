@@ -12,18 +12,18 @@ type ArrayElement<ArrayType> = ArrayType extends readonly (infer ElementType)[] 
 
 export const createAction = () => null
 
-/** Возвращает мутацию, которая заменяет значение в стейте по ключу на переданный payload.
- *  @summary Для быстрого создания мутации, где нужно заменить весь массив на новый.
- *  @key ключ в объекте стейта */
+/** Returns a mutation that replaces the value in the state by key with the passed payload.
+ *  @summary To quickly create a mutation where you need to replace the entire array with a new one.
+ *  @key key in state object */
 export const createMutation =
   <State extends RootState[keyof RootState], Key extends keyof State, Payload extends State[Key]>(key: Key) =>
   (state: State, payload: Payload) =>
     (state[key] = payload)
 
-/** Возвращает мутацию, которая заменяет/добавляет объект в массиве в стейте по ключу
- *  @summary Для быстрого создания мутации, где нужно изменить/добавить элемент в массиве.
- *  @key ключ в объекте стейта
- *  @replaceBy ключ в объекте по которому будет проходить поиск совпадения */
+/** Returns a mutation that replaces/adds an object to an array in the state by key
+ *  @summary To quickly create a mutation where you need to change/add an element to an array.
+ *  @key key in state object
+ *  @replaceBy the key in the object by which the search for a match will be performed */
 export const createMutationSetArrItem =
   <
     State extends RootState[keyof RootState],
@@ -37,10 +37,10 @@ export const createMutationSetArrItem =
     state[key] = setArrItem(state[key] as unknown as object[], item as object, replaceBy) as unknown as State[Key]
   }
 
-/** Возвращает мутацию, которая удаляет объект из массива в стейте по ключу
- *  @summary Для быстрого создания мутации, где нужно удалить элемент из массиве
- *  @key ключ в объекте стейта
- *  @filterBy ключ в объекте по которому будет проходить фильтр */
+/** Returns a mutation that removes an object from the array in the state by key
+ *  @summary To quickly create a mutation where you need to remove an element from an array
+ *  @key key in state object
+ *  @filterBy the key in the object by which the filter will pass */
 export const createMutationDeleteArrItem =
   <
     State extends RootState[keyof RootState],
@@ -58,12 +58,12 @@ export const createMutationDeleteArrItem =
   }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/** Оборачивает экшены модуля в функцию, которая диспатчит состояние в модуль стора actionsState
+/** Wraps module actions into a function that dispatches state to the store module actionsState
  *
- *  **NOTE:** При добавлении нового модуля в стор, не забывать в стэйт модуля actionsState добалвять экшены нового модуля
+ *  **NOTE:** When adding a new module to the store, do not forget to add the actions of the new module to the state of the module actionsState
  *
- *  @summary Для отлеживания состояния выполнения экшенов
- *  @module модуль стора */
+ *  @summary To track the execution status of actions
+ *  @module store module */
 export const wrapModuleActionsInState = <T extends Module<any, any>>(module: T): T => {
   return {
     ...module,

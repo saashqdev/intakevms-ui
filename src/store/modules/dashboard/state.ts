@@ -9,10 +9,10 @@ import {
 } from '@/modules/dashboard/components/DashboardGrid'
 
 export type State = {
-  data: Omit<NodeInfo, 'iops' | 'io_latency' | 'bandwith_data' | 'disk_data'> & {
+  data: Omit<NodeInfo, 'iops' | 'io_latency' | 'bandwidth_data' | 'disk_data'> & {
     iops: NodeInfo['iops'] | null
     io_latency: NodeInfo['io_latency'] | null
-    bandwith_data: NodeInfo['bandwith_data'] | null
+    bandwidth_data: NodeInfo['bandwidth_data'] | null
     disk_data: NodeInfo['disk_data'] | null
   }
   layout: GridLayout
@@ -31,7 +31,7 @@ export const state: State = {
     storage: { size: 0, used: 0, free: 0, percentage: 0, cls: '' },
     iops: null,
     io_latency: null,
-    bandwith_data: null,
+    bandwidth_data: null,
     disk_data: null,
   },
   layout: layoutWithDefault(getLocalStorage('dashboard_grid') || getDefaultLayout()),

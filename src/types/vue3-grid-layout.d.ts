@@ -137,7 +137,7 @@ declare module 'vue3-grid-layout' {
     VNodeProps & AllowedComponentProps & ComponentCustomProps,
     Readonly<ExtractPropTypes<{}>>,
     {
-      // ТИПЫ ПРОПОВ ПИСАТЬ ТУТ
+      // TYPES OF PROPS WRITE HERE
       // someprop: string
       layout: Layout
       'onUpdate:layout': (layout: Layout<any>) => any
@@ -341,7 +341,7 @@ declare module 'vue3-grid-layout' {
     import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps,
     Readonly<import('vue').ExtractPropTypes<{}>>,
     {
-      // ТИПЫ ПРОПОВ ПИСАТЬ ТУТ
+      // TYPES OF PROPS WRITE HERE
       dragAllowFrom?: string
       dragIgnoreFrom?: string
     } & LayoutItem

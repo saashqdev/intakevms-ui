@@ -1,93 +1,92 @@
-# Open vAIR UI
+# inTakevms UI
 
-Пользовательский интерфейс проекта Open vAIR UI
+Project user interface inTakevms UI
 
-## Установка
-*Для установки и запуска необходимо, чтобы был установлен Node.js v20 и выше*
+## Installation
+*To install and run, you need to have Node.js v20 or higher installed*
 
-**Порядок установки**
-1. __Установить необходимые пакеты__
+**Installation procedure**
+1. __Install required packages__
 
-Для этого выполнить команду установки:
+To do this, run the installation command:
 ```sh
-npm install
+pnpm install
 ```
 
-2. __Создать и настроить `.env` файл__
+2. __Create and configure `.env` file__
 
-Файл `.env` должен находится в корне проекта
+File `.env` must be located at the root of the project
 
-Можно создать копию `.env.example`
+You can create a copy `.env.example`
 
-Необходимо указать URL API сервера в поле `VITE_DEV_API_BASE_URL`
+You must specify the server API URL in the field `VITE_DEV_API_BASE_URL`
 
-## Запуск
+## Launch
 
-__Запуск в режиме разработки__
+__Run in development mode__
 ```sh
-npm run dev
+pnpm dev
 ```
 
-## Сборка
-__Сборка с проверкой типов и проверкой eslint__
+## Assembly
+__Build with type checking and eslint check__
 
-Так же выполняет проверку типов `npm run type-check` и статический анализ кода `npm run lint`
-
-```sh
-npm run build
-```
-*В случае наличия ошибки типов или предупреждений eslint сборка не будет выполнена*
-
-__Сборка без проверки типов и проверки eslint__
-
+Also performs type checking `pnpm type-check` and static code analysis `pnpm lint`
 
 ```sh
-npm run build-only
+pnpm build
 ```
-*Не рекомендуется к использованию, без особой причины*
+*If there are type errors or eslint warnings, the build will fail.*
+
+__Build without type checking and eslint checking__
 
 
-### Проверка типов
 ```sh
-npm run type-check
+pnpm build-only
 ```
+*Not recommended for use without a specific reason.*
 
-### Статический анализ кода
+
+### Type checking
 ```sh
-npm run lint
+pnpm type-check
 ```
 
-### Генерация типов API
-Для генерации типов API используется пакет `@openapitools/openapi-generator-cli`
-
-Для обновления типов API нужно убедиться, что в `.env` файле 
-в поле `GENERATE_API_SCHEMA_URL` указан корректный URL JSON до файла `openapi.json`, который отдаёт Swagger
-
-Далее выполнить команду
+### Static code analysis
 ```sh
-npm run generate-api
+pnpm lint
+```
+
+### API Type Generation
+The package is used to generate API types. `@openapitools/openapi-generator-cli`
+
+To update API types, you need to make sure that `.env` file in the field `GENERATE_API_SCHEMA_URL` specified the correct JSON URL to the file `openapi.json`, which produces Swagger
+
+Next run the command
+```sh
+pnpm generate-api
 ```
 
 
-### Описание структуры проекта 
-*(папка src)*
+### Description of the project structure 
+*(folder src)*
 
-`api` - API, кофигурация axios, сгенерированные API типы
+`api` - API, axios configuration, generated API types
 
-`assets` - Файлы шрифтов, css
+`assets` - Font files, css
 
-`components` - библиотека общих компонентов
+`components` - shared component library
 
-`helpers` - вспомогательные функции
+`helpers` - auxiliary functions
 
-`locales` - файлы локализаций
+`locales` - localization files
 
-`modules` - компоненты приложения, разбитые по модулям
+`modules` - application components broken down into modules
 
-`router` - роутер приложения
+`router` - router application
 
-`store` - стор приложения, экшены, мутации, стэйт
+`store` - app store, actions, mutations, state
 
-`theme` - файлы конфигурации цветовых тем приложения
+`theme` - application color theme configuration files
 
-`types` - глобальные описания некоторых типов
+`types` - global descriptions of some types

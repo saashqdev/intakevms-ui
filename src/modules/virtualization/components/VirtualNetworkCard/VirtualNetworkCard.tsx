@@ -19,7 +19,7 @@ export const VirtualNetworkCard = defineComponent({
   render() {
     const vnet = this.vnet
     const cardProps = {
-      backlink: { text: `Виртуальная сеть - ${this.vnet?.network_name || this.$t('noData')}` },
+      backlink: { text: `Virtual network - ${this.vnet?.network_name || this.$t('noData')}` },
       maxWidth: 800,
     }
 
@@ -27,7 +27,7 @@ export const VirtualNetworkCard = defineComponent({
       return (
         <Card {...cardProps}>
           <IsExistsHoc actions={actions}>
-            {!this.vnet && 'Не удалось получить данные о виртуальной сети. Произошла ошибка'}
+            {!this.vnet && 'Failed to get virtual network information. An error occurred.'}
           </IsExistsHoc>
         </Card>
       )
@@ -38,8 +38,8 @@ export const VirtualNetworkCard = defineComponent({
         <Card
           {...cardProps}
           tabs={[
-            { text: 'Основные настройки', value: 'main' },
-            { text: 'Портгруппы', value: 'portgroup' },
+            { text: 'Basic settings', value: 'main' },
+            { text: 'Portgroups', value: 'portgroup' },
           ]}
         >
           {{
