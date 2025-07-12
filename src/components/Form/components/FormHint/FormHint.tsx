@@ -1,9 +1,9 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 
 import { Icon } from '@/components/Icon'
 import type { FormHintType } from '../../types'
 
-/** Сколько элементов будет показано без сворачивания под кнопку "Показать всё" */
+/** How many items will be shown without collapsing under the "Show all" button */
 const itemsVisibleCount = 15
 
 export const FormHint = defineComponent({

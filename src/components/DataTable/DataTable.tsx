@@ -17,7 +17,7 @@ import {
 } from '@helpers'
 
 import type { DataTableHeader, DataTableItem, DataTableItemSlotProps, DataTableProps } from './types'
-import { DataTableSelectHeaderSlotProps } from './types'
+import type { DataTableSelectHeaderSlotProps } from './types'
 import {
   ColumnsMenu,
   Error,

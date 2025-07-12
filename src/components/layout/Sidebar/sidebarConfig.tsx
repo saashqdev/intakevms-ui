@@ -8,10 +8,10 @@ type Path = string | Record<'root' | string, string>
 
 export type PathObject = Path | Record<'root' | string, Path>
 
-/** @title локализационный ключ из раздела sidebar
- *  @path путь (ключ из объекта routes)
- *  @icon JSX иконка
- *  @children вложенные ссылки */
+/** @title localization key from section sidebar
+ *  @path path (key from object routes)
+ *  @icon JSX icon
+ *  @children nested links */
 export type SidebarItemType = {
   title: string
   path?: PathObject

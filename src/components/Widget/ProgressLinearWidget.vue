@@ -32,8 +32,8 @@ export default defineComponent({
   },
   computed: {
     zone() {
-      if (this.value <= WARN_ZONE) return 'green'
-      else if (WARN_ZONE < this.value && this.value <= RED_ZONE) return 'warn'
+      if (Number(this.value) <= WARN_ZONE) return 'green'
+      else if (WARN_ZONE < Number(this.value) && Number(this.value) <= RED_ZONE) return 'warn'
       else return 'red'
     },
   },

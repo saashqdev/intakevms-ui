@@ -15,7 +15,7 @@ export const UISettings = defineComponent({
       get() {
         return this.$i18n.locale
       },
-      set(locale: 'ru' | 'en') {
+      set(locale: 'de' | 'en') {
         setLocalStorage('ui_settings', { ...this.ui_settings, locale })
         this.$i18n.locale = locale
         this.$formkit.setLocale(locale)

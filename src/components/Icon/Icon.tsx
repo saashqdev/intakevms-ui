@@ -21,7 +21,7 @@ const SIZES = {
   xlarge: 32,
 }
 
-// Библиотека иконок https://pictogrammers.com/library/mdi/
+// Icon library https://pictogrammers.com/library/mdi/
 export const Icon = defineComponent({
   name: 'AppIcon',
   props: {

@@ -8,7 +8,7 @@ export type FormKitValidationI18NArgs = {
   message?: string
 }
 
-export const ru = {
+export const de = {
   // COMMON
   close: 'Закрыть',
   open: 'Открыть',
@@ -983,8 +983,8 @@ export const ru = {
     },
     locale: 'Язык',
     locales: {
-      ru: '🇷🇺 Русский',
-      en: '🇺🇸 English',
+      de: '🇩🇪 Deutsche',
+      en: '🇨🇦 English',
     },
     sizeNotation: 'Единицы измерения',
     oldVersion: 'Перейти на старый интерфейс',

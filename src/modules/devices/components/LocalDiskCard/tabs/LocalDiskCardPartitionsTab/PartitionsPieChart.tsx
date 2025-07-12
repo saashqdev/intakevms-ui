@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import type { LocalDisk } from '@api/generated'
 import { sum } from 'lodash'
 import VueApexCharts from 'vue3-apexcharts'

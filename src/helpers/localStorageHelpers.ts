@@ -8,14 +8,14 @@ export type LocalStorage = {
   dashboard_grid_settings?: DashboardState['gridSettings']
   token?: string
   refresh_token?: string
-  ui_settings?: { theme?: 'dark' | 'light'; locale?: 'ru' | 'en'; sizeNotation?: 'si' | 'iec' }
+  ui_settings?: { theme?: 'dark' | 'light'; locale?: 'de' | 'en'; sizeNotation?: 'si' | 'iec' }
   tableColumns?: Record<string, Record<string, { visible?: boolean }>>
 }
 
 /** Returns a value from localStorage */
 export function getLocalStorage<T extends keyof LocalStorage>(key: T): NonNullable<LocalStorage[T]> | null {
-  const value = localStorage.getItem(key)
-  return isJson(value) ? JSON.parse(value as string) : value
+  const value = localStorage.getItem(key) as NonNullable<LocalStorage[T]>
+  return isJson(value as string) ? JSON.parse(value as string) : value
 }
 
 /** Writes a value to localStorage */

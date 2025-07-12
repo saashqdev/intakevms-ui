@@ -7,7 +7,7 @@ import { Icon } from '@/components/Icon'
     <template #activator="{ props }">
       <v-btn class="table_rowsPerPage_button btn_icon_right" variant="text" size="small" v-bind="props">
         {{ $tc('dataTable.rowsPerPage', value) }}
-        <!--        <MenuButtonChevronIcon />-->
+        <!-- <MenuButtonChevronIcon />-->
         <Icon icon="chevronDown" size="xsmall" style="transform: translateY(1px)" />
       </v-btn>
     </template>

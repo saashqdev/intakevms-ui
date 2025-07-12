@@ -1,4 +1,4 @@
-import type { FormKitValidationI18NArgs } from './ru'
+import type { FormKitValidationI18NArgs } from './de'
 
 export const en = {
   // COMMON
@@ -72,7 +72,7 @@ export const en = {
       expiresSoon: {
         title: 'Trial license will expire soon',
         text: `The trial license expires in {unit}
-        Contact Aerodisk sales department`,
+        Contact Intakevms sales department`,
       },
       dontShowAgain: "Don't show again",
       closeText: 'Ok',
@@ -81,12 +81,12 @@ export const en = {
       expired: {
         title: 'Technical support expired',
         text: `Technical support has expired
-        Contact Aerodisk sales department`,
+        Contact Intakevms sales department`,
       },
       expiresSoon: {
         title: 'Technical support expires soon',
         text: `Your technical support will expire in {unit}
-        Contact Aerodisk sales department`,
+        Contact Intakevms sales department`,
       },
       dontShowAgain: "Don't show again",
       closeText: 'Ok',
@@ -121,10 +121,10 @@ export const en = {
       },
       iec: {
         B: 'Byte',
-        K: 'Kibibyte',
-        M: 'Mebibyte',
-        G: 'Gibibyte',
-        T: 'Tebibyte',
+        K: 'Kilobyte',
+        M: 'Megabyte',
+        G: 'Gigabyte',
+        T: 'Terabyte',
       },
     },
     short: {
@@ -974,8 +974,8 @@ export const en = {
     },
     locale: 'Language',
     locales: {
-      ru: '🇷🇺 Русский',
-      en: '🇺🇸 English',
+      de: '🇩🇪 German',
+      en: '🇨🇦 English',
     },
     sizeNotation: 'Size notation',
     oldVersion: 'Go to old user interface',
@@ -984,10 +984,10 @@ export const en = {
       si: 'SI Decimal (KB, MB, GB, TB)',
     },
     sizeNotationsDesc: {
-      iec: `Kibibyte (KiB) 2^10 bytes
-        Mebibyte (MiB) 2^20 bytes
-        Gibibyte (GiB) 2^30 bytes
-        Tebibyte (TiB) 2^40 bytes`,
+      iec: `Kilobyte (KiB) 2^10 bytes
+        Megabyte (MiB) 2^20 bytes
+        Gigabyte (GiB) 2^30 bytes
+        Terabyte (TiB) 2^40 bytes`,
       si: `Kilobyte (KB) 10^3 bytes
        Megabyte (MB) 10^6 bytes
        Gigabyte (GB) 10^9 bytes

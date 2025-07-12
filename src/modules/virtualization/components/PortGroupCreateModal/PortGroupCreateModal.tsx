@@ -2,7 +2,7 @@ import { defineComponent } from 'vue'
 
 import { VirtualizationActionTypes } from '@/store/modules'
 import { PortGroupCreateModalForm } from './PortGroupCreateModalForm'
-import { FormDataType } from './types'
+import type { FormDataType } from './types'
 
 export const PortGroupCreateModal = defineComponent({
   name: 'PortGroupCreateModal',

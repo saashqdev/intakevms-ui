@@ -1,7 +1,7 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import { getHours, isSameDay } from 'date-fns'
 import VueDatePicker from '@vuepic/vue-datepicker'
-import { FormKitFrameworkContext } from '@formkit/core'
+import type { FormKitFrameworkContext } from '@formkit/core'
 
 import type { DateFieldType } from '@/components/Form/types'
 import { Button } from '@/components/Button'

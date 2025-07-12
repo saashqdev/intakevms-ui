@@ -41,7 +41,7 @@ export const SessionLoginModal = defineComponent({
   },
   render() {
     return (
-      <ModalForm title={this.$t(`${tPrefix}.modalTitle`)} fields={fields()} onSubmit={this.submit} submitText='Логин' />
+      <ModalForm title={this.$t(`${tPrefix}.modalTitle`)} fields={fields()} onSubmit={this.submit} submitText='Login' />
     )
   },
 })

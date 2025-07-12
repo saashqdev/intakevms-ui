@@ -1,5 +1,5 @@
 import { capitalize } from 'vue'
-import { ApexOptions } from 'apexcharts'
+import type { ApexOptions } from 'apexcharts'
 import { defaultsDeep } from 'lodash'
 import { format } from 'date-fns'
 

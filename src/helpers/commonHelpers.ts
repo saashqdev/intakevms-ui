@@ -33,7 +33,7 @@ export const generateMac = () =>
  * @param val boolean
  * @return string "Yes" | "No"
  * @example
- * // locale = "fr"
+ * // locale = "de"
  * booleanTranslate(true) // => "oui"
  * booleanTranslate(false) // => "non"
  * // locale = "en"

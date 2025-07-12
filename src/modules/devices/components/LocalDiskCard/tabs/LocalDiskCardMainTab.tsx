@@ -1,4 +1,4 @@
-import { capitalize, defineComponent, PropType } from 'vue'
+import { capitalize, defineComponent, type PropType } from 'vue'
 
 import type { LocalDisk } from '@api/generated'
 

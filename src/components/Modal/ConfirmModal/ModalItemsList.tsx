@@ -1,6 +1,6 @@
 import { defineComponent, type PropType } from 'vue'
 
-/** Сколько элементов будет показано без сворачивания под кнопку "Показать всё" */
+/** How many items will be shown without collapsing under the "Show all" button */
 const ITEMS_VISIBLE = 15
 
 export const ModalItemsList = defineComponent({

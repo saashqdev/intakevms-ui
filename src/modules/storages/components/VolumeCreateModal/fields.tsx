@@ -2,7 +2,7 @@ import type { CreateVolumeFormatEnum, Storage } from '@/api/generated'
 import { t } from '@/locales'
 import { bytesToSize, bytesToUnit, sizeToBytes } from '@helpers'
 
-import { FieldsPropType } from '@/components/Form/types'
+import type { FieldsPropType } from '@/components/Form/types'
 import { getFormValues } from '@/components/Form/helpers'
 
 const tPrefix = 'storages.disks.actions.create'

@@ -6,7 +6,7 @@ import { bytesToSize } from '@helpers'
 import { compT as t } from '@/locales'
 
 import { IsExistsHoc } from '@/components/IsExistsHoc'
-import { DataTable, DataTableHeaders, TableCellStatus } from '@/components/DataTable'
+import { DataTable, type DataTableHeaders, TableCellStatus } from '@/components/DataTable'
 import type { ButtonProps } from '@/components/Button'
 
 import { getStoragePath } from '../../utils'

@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 
 import type { LocalDisk } from '@api/generated'
 import { DevicesActionTypes } from '@/store'

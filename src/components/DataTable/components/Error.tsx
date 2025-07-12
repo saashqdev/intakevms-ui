@@ -1,5 +1,5 @@
 import type { AxiosError } from 'axios'
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 
 import { Icon } from '@/components/Icon'
 import { extractErrorMessage } from '@helpers'

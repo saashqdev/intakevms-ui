@@ -1,4 +1,4 @@
-import { defineComponent, type JSXComponent, PropType } from 'vue'
+import { defineComponent, type JSXComponent, type PropType } from 'vue'
 import { VCheckboxBtn } from 'vuetify/components'
 
 import { Icon } from '@/components/Icon'

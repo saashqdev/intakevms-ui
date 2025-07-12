@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 
 import type { VirtualMachineInfo } from '@api/generated'
 import { DevicesActionTypes, StorageActionTypes, VirtualizationActionTypes } from '@/store/modules'

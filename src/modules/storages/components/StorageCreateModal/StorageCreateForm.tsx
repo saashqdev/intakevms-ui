@@ -18,7 +18,7 @@ export const StorageCreateForm = defineComponent({
   },
   methods: {
     async submit(v: FormDataType) {
-      // TODO: поле mount_version for type nfs
+      // TODO: field mount_version for type nfs
       const specs = v.storage_type === storageTypes.nfs ? pick(v, ['ip', 'path']) : pick(v, ['fs_type', 'path'])
       await this.$store.dispatch(StorageActionTypes.CREATE_STORAGE, {
         ...pick(v, ['name', 'description', 'storage_type']),

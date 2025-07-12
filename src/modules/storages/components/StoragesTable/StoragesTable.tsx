@@ -4,7 +4,7 @@ import { StorageActionTypes } from '@/store'
 import { bytesToSize } from '@helpers'
 import { compT as t } from '@/locales'
 
-import { DataTable, DataTableHeaders, TableCellStatus } from '@/components/DataTable'
+import { DataTable, type DataTableHeaders, TableCellStatus } from '@/components/DataTable'
 import { IsExistsHoc } from '@/components/IsExistsHoc'
 import type { ButtonProps } from '@/components/Button'
 import { ProgressLinearWidget } from '@/components/Widget'

@@ -4,7 +4,7 @@ import { nearestNumber } from '@helpers/commonHelpers'
 import type { ArrayElement } from '@/types'
 import { store } from '@/store'
 
-const { t } = i18n.global
+const { t } = i18n.global as any
 
 enum powMultiplier {
   'B' = 0,
@@ -53,7 +53,7 @@ const units = {
  * @param props.withoutUnit display unit of measurement in the returned string
  * @return string with specified size
  * @example
- * // locale = "ru"
+ * // locale = "de"
  * bytesToSize(1000000000) // => "1 GB"
  * bytesToSize(32000000) // => "32 MB"
  * bytesToSize(5432342355430) // => "5.43 TB"
@@ -135,7 +135,7 @@ export function bytesToUnit<T extends (keyof typeof powMultiplier)[]>(bytes?: nu
  * @param unit unit of measurement
  * @return string with the converted unit of measurement
  * @example
- * // locale="fr"
+ * // locale="de"
  * sizeUnitTranslate("M") // => "MB"
  * sizeUnitTranslate("G") // => "GB"
  * // locale="en"

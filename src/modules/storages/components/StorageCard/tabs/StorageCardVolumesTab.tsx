@@ -1,11 +1,11 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import { filter } from 'lodash'
 
 import type { Storage } from '@api/generated'
 import { compT as t } from '@/locales'
 import { bytesToSize } from '@helpers'
 
-import { DataTable, DataTableHeaders, TableCellStatus } from '@/components/DataTable'
+import { DataTable, type DataTableHeaders, TableCellStatus } from '@/components/DataTable'
 import { ProgressLinearWidget } from '@/components/Widget'
 
 import { useActions } from '../../VolumesTable/actions'

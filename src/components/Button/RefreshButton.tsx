@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import { omit } from 'lodash'
 
 import { Icon } from '@/components/Icon'

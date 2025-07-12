@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import { find, pick } from 'lodash'
 
 import type { VirtualMachineInfo } from '@api/generated'

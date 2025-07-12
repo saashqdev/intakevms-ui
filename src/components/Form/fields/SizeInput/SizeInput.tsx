@@ -1,18 +1,18 @@
-import { capitalize, defineComponent, PropType } from 'vue'
-import { FormKitFrameworkContext, getNode } from '@formkit/core'
+import { capitalize, defineComponent, type PropType } from 'vue'
+import { type FormKitFrameworkContext, getNode } from '@formkit/core'
 import { chain } from 'lodash'
 import { FormKit } from '@formkit/vue'
 
-import { i18n, type ru } from '@/locales'
+import { i18n, type de } from '@/locales'
 import { bytesToSize, bytesToUnit, sizeToBytes } from '@helpers'
 
-import { SizeFieldType } from '../../types'
+import type { SizeFieldType } from '../../types'
 import { InputWrapper } from '../InputWrapper'
 
 const { t } = i18n.global
 
-type Notation = keyof (typeof ru)['sizes']['full']
-type Unit = keyof (typeof ru)['sizes']['full']['si']
+type Notation = keyof (typeof de)['sizes']['full']
+type Unit = keyof (typeof de)['sizes']['full']['si']
 
 const sizeLabel = (notation: Notation, unit: Unit) =>
   `${t(`sizes.full.${notation}.${unit}`)} (${t(`sizes.short.${notation}.${unit}`)})`

@@ -6,23 +6,23 @@ import { createI18n, useI18n } from 'vue-i18n'
 import { getLocalStorage } from '@helpers/localStorageHelpers'
 
 import { en } from './en'
-import { ru } from './ru'
+import { de } from './de'
 import { pluralizationRules } from './plural'
 
-type MessageSchema = typeof ru
+type MessageSchema = typeof de
 
 export * from './en'
-export * from './ru'
+export * from './de'
 
 export const defaultLocale =
-  getLocalStorage('ui_settings')?.locale || window.navigator.language.startsWith('ru-') ? 'ru' : 'en'
+  getLocalStorage('ui_settings')?.locale || window.navigator.language.startsWith('de-') ? 'de' : 'en'
 
 // regexp cyrillic [a-yao]
-export const i18n = createI18n<[MessageSchema], 'ru' | 'en', false>({
+export const i18n = createI18n<[MessageSchema], 'de' | 'en', false>({
   locale: defaultLocale,
   fallbackLocale: defaultLocale,
   globalInjection: true,
-  messages: { en, ru },
+  messages: { en, de },
   pluralizationRules,
 })
 

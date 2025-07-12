@@ -5,7 +5,7 @@ import { compT as t } from '@/locales'
 import { VirtualizationActionTypes } from '@/store/modules'
 
 import { IsExistsHoc } from '@/components/IsExistsHoc'
-import { DataTable, DataTableHeaders } from '@/components/DataTable'
+import { DataTable, type DataTableHeaders } from '@/components/DataTable'
 import type { ButtonProps } from '@/components/Button'
 
 import { getVnetPath } from '../../utils'

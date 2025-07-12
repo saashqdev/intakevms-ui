@@ -1,7 +1,7 @@
 import type { VirtualMachineInfo } from '@api/generated'
 import { sizeToBytes } from '@helpers'
 import { t } from '@/locales'
-import { TabsPropType } from '@/components/Form'
+import type { TabsPropType } from '@/components/Form'
 
 import type { FormDataType } from './types'
 import { AddDisksInput, AddImageInput, AddNetworkInput } from './components'
@@ -64,7 +64,7 @@ export const tabs = (): TabsPropType => [
             type: 'select',
             name: 'boot_device',
             label: t(`${tPrefix}.settings.fields.bootDevice.label`),
-            placeholder: 'Выберите загрузочное устройство',
+            placeholder: 'Select boot device',
             options: [
               { label: 'HD', value: 'hd' },
               { label: 'CDROM', value: 'cdrom' },

@@ -1,4 +1,4 @@
-import { capitalize, defineComponent, PropType } from 'vue'
+import { capitalize, defineComponent, type PropType } from 'vue'
 
 import type { Storage } from '@api/generated'
 import { CardInfoBlock } from '@/components/Card'

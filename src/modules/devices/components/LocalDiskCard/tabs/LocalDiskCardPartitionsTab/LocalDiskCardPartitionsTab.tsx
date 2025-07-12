@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import { cloneDeep, sortBy } from 'lodash'
 
 import type { LocalDisk } from '@api/generated'

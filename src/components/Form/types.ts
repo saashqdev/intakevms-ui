@@ -2,7 +2,7 @@
 import type { DataTableHeader, DataTableProps } from '@/components/DataTable'
 import type { RenderFunction } from '@/types'
 import type { FormKitFrameworkContext, FormKitFrameworkContextState } from '@formkit/core'
-import { ru } from '@/locales'
+import { de } from '@/locales'
 import type { ComputedRef, StyleValue, VNode } from 'vue'
 import type { FormKitNode } from '@formkit/core'
 
@@ -99,7 +99,7 @@ export type FileFieldType = {
 export type SizeFieldType = {
   type: 'size'
   precision?: number
-  allowed?: (keyof (typeof ru)['sizes']['full']['si'])[]
+  allowed?: (keyof (typeof de)['sizes']['full']['si'])[]
 }
 
 export type CheckboxFieldType = {
