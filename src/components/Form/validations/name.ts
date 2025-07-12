@@ -1,10 +1,9 @@
 import type { FormKitValidationRule } from '@formkit/validation'
-import type { FormKitNode } from '@formkit/core'
 
 const REGEXP_UPPER = /^[A-Z0-9_ ]+$/
 const REGEXP = /^[a-zA-Z0-9_ ]+$/
 
-/** Пропускает только латинские буквы, цифры, пробел и нижнее подчёркивание _
+/** Skips only Latin letters, numbers, spaces and underscores _
  *
  * @example
  * "test" // => true
@@ -13,9 +12,9 @@ const REGEXP = /^[a-zA-Z0-9_ ]+$/
  *
  * "TEST 123" // => false
  * "Test__!@#" // => false
- * "Русский" // => false
+ * "German" // => false
  * */
-export const name: FormKitValidationRule = (node: FormKitNode) => {
+export const name: FormKitValidationRule = node => {
   const value = node.value
   if (['string', 'number', 'boolean'].includes(typeof value))
     return REGEXP.test((value as string | number | boolean).toString())
@@ -23,7 +22,7 @@ export const name: FormKitValidationRule = (node: FormKitNode) => {
   return false
 }
 
-/** Пропускает только большие латинские буквы, цифры, пробел и нижнее подчёркивание _
+/** Skips only uppercase Latin letters, numbers, spaces and underscores _
  *
  * @example
  * "TEST" // => true
@@ -32,10 +31,10 @@ export const name: FormKitValidationRule = (node: FormKitNode) => {
  *
  * "TEST 123" // => false
  * "TEST__!@#" // => false
- * "РУССКИЙ" // => false
+ * "GERMAN" // => false
  * "lowerCase" // => false
  * */
-export const nameUpper: FormKitValidationRule = (node: FormKitNode) => {
+export const nameUpper: FormKitValidationRule = node => {
   const value = node.value
   if (['string', 'number', 'boolean'].includes(typeof value))
     return REGEXP_UPPER.test((value as string | number | boolean).toString())

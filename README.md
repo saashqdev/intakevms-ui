@@ -10,7 +10,7 @@ Project user interface inTakevms UI
 
 To do this, run the installation command:
 ```sh
-pnpm install
+npm install
 ```
 
 2. __Create and configure `.env` file__
@@ -25,7 +25,7 @@ You must specify the server API URL in the field `VITE_DEV_API_BASE_URL`
 
 __Run in development mode__
 ```sh
-pnpm dev
+npm dev
 ```
 
 ## Assembly
@@ -34,7 +34,7 @@ __Build with type checking and eslint check__
 Also performs type checking `pnpm type-check` and static code analysis `pnpm lint`
 
 ```sh
-pnpm build
+npm build
 ```
 *If there are type errors or eslint warnings, the build will fail.*
 
@@ -42,19 +42,19 @@ __Build without type checking and eslint checking__
 
 
 ```sh
-pnpm build-only
+npm build-only
 ```
 *Not recommended for use without a specific reason.*
 
 
 ### Type checking
 ```sh
-pnpm type-check
+npm type-check
 ```
 
 ### Static code analysis
 ```sh
-pnpm lint
+npm lint
 ```
 
 ### API Type Generation
@@ -64,7 +64,7 @@ To update API types, you need to make sure that `.env` file in the field `GENERA
 
 Next run the command
 ```sh
-pnpm generate-api
+npm generate-api
 ```
 
 

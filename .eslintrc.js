@@ -23,6 +23,7 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'vue/no-v-for-template-key': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'vue/no-v-model-argument': 'off',
     '@typescript-eslint/ban-types': 'off',
     'vue/no-setup-props-destructure': 'off',

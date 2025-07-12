@@ -43,7 +43,7 @@ export default defineComponent({
     },
   },
   render() {
-    const { field } = this.$props
+    const { field } = this.$props as any
 
     if (!this.show) return null
     return <FormKit {...field} preserve />

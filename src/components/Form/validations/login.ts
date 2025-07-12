@@ -1,9 +1,8 @@
 import type { FormKitValidationRule } from '@formkit/validation'
-import type { FormKitNode } from '@formkit/core'
 
 const regexp = /^[a-zA-Z0-9-_]+$/
 
-/** Пропускает только латинские буквы в любом регистре, цифры, нижнее подчёркивание (_) и дефис (-)
+/** Skips only Latin letters in any case, numbers, underscores (_) and hyphens (-)
  *
  * @example
  * "TEST" // => true
@@ -15,9 +14,9 @@ const regexp = /^[a-zA-Z0-9-_]+$/
  *
  * "TEST 123" // => false
  * "TEST__!@#" // => false
- * "РУССКИЙ" // => false
+ * "GERMAN" // => false
  * */
-export const login: FormKitValidationRule = (node: FormKitNode) => {
+export const login: FormKitValidationRule = node => {
   const value = node.value
   if (['string', 'number', 'boolean'].includes(typeof value))
     return regexp.test((value as string | number | boolean).toString())

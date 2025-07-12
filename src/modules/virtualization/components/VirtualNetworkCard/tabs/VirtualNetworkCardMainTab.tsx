@@ -24,12 +24,7 @@ export const VirtualNetworkCardMainTab = defineComponent({
         </div>
         <CardInfoBlock title='virtual_port_type' content={i.virtual_port_type} />
         <CardInfoBlock title='virsh XML' class='mt-2'>
-          <Button
-            title='View'
-            size='small'
-            variant='plain'
-            style={{ padding: 0, fontSize: '12px', height: '17px' }}
-          >
+          <Button title='View' size='small' variant='plain' style={{ padding: 0, fontSize: '12px', height: '17px' }}>
             <Modal title='Virsh XML'>
               <div style={{ whiteSpace: 'pre' }}>{i.virsh_xml}</div>
             </Modal>

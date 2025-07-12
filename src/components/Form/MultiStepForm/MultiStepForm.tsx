@@ -121,9 +121,9 @@ export default defineComponent({
       <FormKit
         type='form'
         ref='form'
-        plugins={[this.stepPlugin]}
-        onSubmit={this.submit}
-        onSubmitRaw={this.submitRaw}
+        plugins={[this.stepPlugin] as any}
+        onSubmit={this.submit as any}
+        onSubmitRaw={this.submitRaw as any}
         modelValue={this.values}
         onUpdate:modelValue={this.onUpdateValues}
         data-type='multistep'

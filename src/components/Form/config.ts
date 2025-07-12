@@ -19,7 +19,7 @@ const inputs = {
   number,
   size,
   date,
-}
+} as any
 
 export const rules = { ip, mac, uniq, multipleOf, name, login }
 

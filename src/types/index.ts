@@ -1,5 +1,5 @@
 import type { DefineComponent } from 'vue'
-import { JSX } from 'vue/jsx-runtime'
+import type { JSX } from 'vue/jsx-runtime'
 
 export type Component = JSX.Element
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

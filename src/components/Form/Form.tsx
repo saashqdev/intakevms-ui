@@ -38,7 +38,6 @@ export default defineComponent({
     async submit(data: unknown, node: FormKitNode) {
       if (!node.context?.state.dirty && !this.initials) return this.$emit('reset')
       if (this.initials && isEqual(this.initials, data) && !this.disableEqualInitialsReset) return this.$emit('reset')
-
       this.onSubmit ? await this.onSubmit?.(data) : this.$emit('submit', data)
     },
     reset(e: MouseEvent) {
@@ -66,7 +65,7 @@ export default defineComponent({
           type='form'
           ref='form'
           id={this.id}
-          onSubmit={this.submit}
+          onSubmit={this.submit as any}
           modelValue={this.values}
           onUpdate:modelValue={this.onUpdateValues}
           ignore={this.ignore}
