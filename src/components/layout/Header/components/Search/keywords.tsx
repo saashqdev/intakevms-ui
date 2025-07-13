@@ -1,99 +1,55 @@
 // ACTIONS KEYWORDS
-export const createKeywords = [
-  'create',
-  'creating',
-  'new',
-  'add',
-  'создать',
-  'создание',
-  'новая',
-  'новый',
-  'новое',
-  'добавить',
+export const createKeywords = ['create', 'creating', 'new', 'add', 'Erstellen', 'Erstellung', 'Neu', 'Hinzufügen']
+export const scanKeywords = ['scan', 'scanning', 'rescanning', 'rescan', 'scannen', 'erneut scannen']
+export const uploadKeywords = ['laden', 'Unterladen', 'load', 'loading', 'upload', 'uploading']
+export const migrationKeywords = [
+  'migrieren',
+  'übertragen',
+  'Übertragung',
+  'Migration',
+  'migrate',
+  'migration',
+  'transfer',
 ]
-export const scanKeywords = [
-  'scan',
-  'scanning',
-  'rescanning',
-  'rescan',
-  'скан',
-  'сканировать',
-  'сканирование',
-  'рескан',
-  'ресканировать',
-  'ресканирование',
-]
-export const uploadKeywords = [
-  'загрузить',
-  'грузить',
-  'подгрузить',
-  'загрузка',
-  'подгрузка',
-  'load',
-  'loading',
-  'upload',
-  'uploading',
-]
-export const migrationKeywords = ['мигрировать', 'перенести', 'перенос', 'миграция', 'migrate', 'migration', 'transfer']
 export const syncKeywords = [
-  'синхронизировать',
-  'синхронизация',
-  'согласовать',
-  'согласование',
+  'Synchronisieren',
+  'Synchronisation',
+  'Koordinieren',
+  'Koordination',
   'sync',
   'synchronization',
 ]
-export const changeKeywords = ['изменить', 'поменять', 'сменить', 'заменить', 'изменение', 'change', 'changing']
+export const changeKeywords = ['ändern', 'ersetzen', 'change', 'changing']
 
 // ENTITIES KEYWORDS
-export const vmKeywords = [
-  'вм',
-  'vm',
-  'виртуальная',
-  'виртуальную',
-  'виртуальные',
-  'virtual',
-  'машина',
-  'машину',
-  'машины',
-  'machine',
-  'machines',
-]
+export const vmKeywords = ['vm', 'virtuell', 'virtual', 'Auto', 'Autos', 'machine', 'machines']
 export const networkInterfaceKeywords = [
-  'сетевое',
-  'сетевой',
-  'устройство',
+  'Netzwerk',
+  'Gerät',
   'network',
   'device',
-  'сеть',
-  'сети',
+  'Netzwerk',
+  'Netzwerke',
   'interface',
-  'интерфейс',
+  'Schnittstelle',
   'bridge',
-  'мост',
+  'Brücke',
 ]
 export const snapshotsKeywords = [
-  'снимок',
-  'снимки',
-  'снеп',
-  'снэп',
-  'снепшот',
-  'снэпшот',
-  'шот',
-  'бэкап',
-  'бекап',
+  'Schnappschuss',
+  'Schnappschüsse',
+  'Aufnahme',
+  'Backup',
   'snapshot',
   'snapshots',
   'snap',
   'shot',
   'backup',
 ]
-export const templatesKeywords = ['шаблон', 'шаблоны', 'template', 'templates']
+export const templatesKeywords = ['Vorlage', 'Vorlagen', 'template', 'templates']
 export const physicalDisksKeywords = [
-  'физический',
-  'физические',
-  'диск',
-  'диски',
+  'physisch',
+  'Datenträger',
   'physical',
   'physicals',
   'disk',
@@ -102,10 +58,9 @@ export const physicalDisksKeywords = [
   'drives',
 ]
 export const virtualVolumeKeywords = [
-  'виртуальный',
-  'виртуальные',
-  'диск',
-  'диски',
+  'virtuell',
+  'Festplatte',
+  'Festplatten',
   'virtual',
   'virtuals',
   'disk',
@@ -116,12 +71,11 @@ export const virtualVolumeKeywords = [
   'volumes',
 ]
 export const metaDisksKeywords = [
-  'мета',
-  'мэта',
-  'брик',
-  'брики',
-  'диск',
-  'диски',
+  'Meta',
+  'Ziegel',
+  'Bricks',
+  'Scheibe',
+  'Scheiben',
   'meta',
   'brick',
   'bricks',
@@ -131,15 +85,12 @@ export const metaDisksKeywords = [
   'drives',
 ]
 export const lunsKeywords = [
-  'блочный',
-  'блочные',
-  'блочное',
-  'устройство',
-  'устройства',
-  'лун',
-  'луны',
-  'блочка',
-  'блок',
+  'Blöcke',
+  'Block',
+  'Gerät',
+  'Geräte',
+  'Mond',
+  'Monde',
   'lun',
   'luns',
   'block',
@@ -147,27 +98,15 @@ export const lunsKeywords = [
   'device',
   'devices',
 ]
-export const settingsKeywords = ['настройки', 'настройка', 'настроить', 'settings', 'setting']
-export const sputnikKeywords = ['спутник', 'sputnik']
-export const storagesKeywords = [
-  'хранилище',
-  'хранилища',
-  'пул',
-  'пулы',
-  'шара',
-  'шары',
-  'storage',
-  'storages',
-  'pool',
-  'pools',
-]
+export const settingsKeywords = ['Einstellungen', 'Einstellung', 'Konfigurieren', 'settings', 'setting']
+export const sputnikKeywords = ['Satellit', 'sputnik']
+export const storagesKeywords = ['Speicher', 'Pool', 'Pools', 'Ball', 'Bälle', 'storage', 'storages', 'pool', 'pools']
 export const storagesTypesKeywords = ['nfs', 'localfs']
-export const diskMigrationKeywords = ['vmware', 'ms', 'вмваре', 'мс']
+export const diskMigrationKeywords = ['vmware', 'ms']
 export const imageKeywords = [
-  'виртуальный',
-  'виртуальные',
-  'образ',
-  'образы',
+  'virtuell',
+  'Bild',
+  'Bilder',
   'virtual',
   'virtuals',
   'image',
@@ -176,31 +115,18 @@ export const imageKeywords = [
   'vfd',
   'cd',
 ]
-export const iscsiSessionKeywords = ['сессия', 'сессии', 'сессию', 'session', 'sessions', 'iscsi']
-export const timeKeywords = ['время', 'дата', 'date', 'time']
-export const chronyKeywords = ['chrony', 'сервер', 'времени']
-export const fibreChannelKeywords = ['фибра', 'фибре', 'канал', 'fibre', 'channel']
-export const nodesKeywords = ['узел', 'нода', 'нод', 'ноды', 'узлы', 'node', 'nodes']
-export const vNetKeywords = [
-  'сеть',
-  'сети',
-  'виртуальная',
-  'виртуальные',
-  'network',
-  'vnet',
-  'net',
-  'virtual',
-  'virtuals',
-]
+export const iscsiSessionKeywords = ['Sitzung', 'Sitzungen', 'session', 'sessions', 'iscsi']
+export const timeKeywords = ['Zeit', 'Datum', 'date', 'time']
+export const chronyKeywords = ['chrony', 'Server', 'Zeit']
+export const fibreChannelKeywords = ['Faser', 'Kanal', 'fibre', 'channel']
+export const nodesKeywords = ['Knoten', 'Nicken', 'node', 'nodes']
+export const vNetKeywords = ['Netzwerk', 'Netzwerke', 'virtuell', 'network', 'vnet', 'net', 'virtual', 'virtuals']
 export const tasksJournalKeywords = [
-  'журнал',
-  'событий',
-  'лог',
-  'события',
-  'событие',
-  'логи',
-  'задачи',
-  'таски',
+  'Ereignisse',
+  'Protokoll',
+  'Ereignis',
+  'Protokolle',
+  'Aufgaben',
   'journal',
   'events',
   'event',
@@ -210,15 +136,12 @@ export const tasksJournalKeywords = [
   'logs',
 ]
 export const criticalNotificationsKeywords = [
-  'уведомления',
-  'уведомление',
-  'ошибка',
-  'ошибки',
-  'лог',
-  'логи',
-  'критические',
-  'критическая',
-  'критическое',
+  'Benachrichtigungen',
+  'Benachrichtigung',
+  'Fehler',
+  'Protokoll',
+  'Protokolle',
+  'Kritisch',
   'notification',
   'notifications',
   'error',
@@ -229,12 +152,11 @@ export const criticalNotificationsKeywords = [
   'criticals',
 ]
 export const warningNotificationsKeywords = [
-  'уведомления',
-  'уведомление',
-  'важное',
-  'важные',
-  'лог',
-  'логи',
+  'Benachrichtigungen',
+  'Benachrichtigung',
+  'Wichtig',
+  'Protokoll',
+  'Protokolle',
   'notification',
   'notifications',
   'warning',
@@ -242,4 +164,4 @@ export const warningNotificationsKeywords = [
   'log',
   'logs',
 ]
-export const passwordKeywords = ['пароль', 'пароля', 'пароли', 'password', 'pass']
+export const passwordKeywords = ['Passwort', 'Passwörter', 'password', 'pass']
