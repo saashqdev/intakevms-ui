@@ -34,7 +34,7 @@ export const actions: ActionTree<State, RootState> & Actions = {
   },
   [AT.LOGIN_SESSION]: async ({ commit }, payload) => {
     const { data } = await api.blockDevices.loginBlockDevicesLoginPost({
-      intakevmsModulesBlockDeviceEntrypointsSchemasInterface: payload,
+      IntakevmsModulesBlockDeviceEntrypointsSchemasInterface: payload,
     })
     commit(MT.SET_SESSION_ITEM, data)
   },

@@ -3677,19 +3677,19 @@ export const BlockDevicesApiAxiosParamCreator = function (configuration?: Config
     /**
      * Log in to the specified iSCSI target.  Args:     data (schemas.Interface): The data required for the login operation,         such as target details, authentication credentials, etc.     user_data (Dict, optional): Additional user data to be included in the         request.         Defaults to `Depends(get_current_user)`.     crud (InterfaceCrud, optional): An instance of the `InterfaceCrud`         interface that provides access to the necessary data for the login         operation. Defaults to `Depends(InterfaceCrud)`.  Returns:     schemas.InterfaceLogin: A `schemas.InterfaceLogin` object containing the         result of the login operation.  Raises:     HTTPException: If there is an error while logging in to the iSCSI         target, this function raises an `HTTPException` with an appropriate         status code and error message.
      * @summary Login
-     * @param {IntakevmsModulesBlockDeviceEntrypointsSchemasInterface} intakevmsModulesBlockDeviceEntrypointsSchemasInterface
+     * @param {IntakevmsModulesBlockDeviceEntrypointsSchemasInterface} IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     loginBlockDevicesLoginPost: async (
-      intakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface,
+      IntakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface,
       options: RawAxiosRequestConfig = {}
     ): Promise<RequestArgs> => {
-      // verify required parameter 'intakevmsModulesBlockDeviceEntrypointsSchemasInterface' is not null or undefined
+      // verify required parameter 'IntakevmsModulesBlockDeviceEntrypointsSchemasInterface' is not null or undefined
       assertParamExists(
         'loginBlockDevicesLoginPost',
-        'intakevmsModulesBlockDeviceEntrypointsSchemasInterface',
-        intakevmsModulesBlockDeviceEntrypointsSchemasInterface
+        'IntakevmsModulesBlockDeviceEntrypointsSchemasInterface',
+        IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
       )
       const localVarPath = `/block-devices/login`
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -3713,7 +3713,7 @@ export const BlockDevicesApiAxiosParamCreator = function (configuration?: Config
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
       localVarRequestOptions.data = serializeDataIfNeeded(
-        intakevmsModulesBlockDeviceEntrypointsSchemasInterface,
+        IntakevmsModulesBlockDeviceEntrypointsSchemasInterface,
         localVarRequestOptions,
         configuration
       )
@@ -3837,16 +3837,16 @@ export const BlockDevicesApiFp = function (configuration?: Configuration) {
     /**
      * Log in to the specified iSCSI target.  Args:     data (schemas.Interface): The data required for the login operation,         such as target details, authentication credentials, etc.     user_data (Dict, optional): Additional user data to be included in the         request.         Defaults to `Depends(get_current_user)`.     crud (InterfaceCrud, optional): An instance of the `InterfaceCrud`         interface that provides access to the necessary data for the login         operation. Defaults to `Depends(InterfaceCrud)`.  Returns:     schemas.InterfaceLogin: A `schemas.InterfaceLogin` object containing the         result of the login operation.  Raises:     HTTPException: If there is an error while logging in to the iSCSI         target, this function raises an `HTTPException` with an appropriate         status code and error message.
      * @summary Login
-     * @param {IntakevmsModulesBlockDeviceEntrypointsSchemasInterface} intakevmsModulesBlockDeviceEntrypointsSchemasInterface
+     * @param {IntakevmsModulesBlockDeviceEntrypointsSchemasInterface} IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async loginBlockDevicesLoginPost(
-      intakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface,
+      IntakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface,
       options?: RawAxiosRequestConfig
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InterfaceLogin>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.loginBlockDevicesLoginPost(
-        intakevmsModulesBlockDeviceEntrypointsSchemasInterface,
+        IntakevmsModulesBlockDeviceEntrypointsSchemasInterface,
         options
       )
       const index = configuration?.serverIndex ?? 0
@@ -3934,7 +3934,7 @@ export const BlockDevicesApiFactory = function (
       options?: RawAxiosRequestConfig
     ): AxiosPromise<InterfaceLogin> {
       return localVarFp
-        .loginBlockDevicesLoginPost(requestParameters.intakevmsModulesBlockDeviceEntrypointsSchemasInterface, options)
+        .loginBlockDevicesLoginPost(requestParameters.IntakevmsModulesBlockDeviceEntrypointsSchemasInterface, options)
         .then(request => request(axios, basePath))
     },
     /**
@@ -3966,7 +3966,7 @@ export interface BlockDevicesApiLoginBlockDevicesLoginPostRequest {
    * @type {IntakevmsModulesBlockDeviceEntrypointsSchemasInterface}
    * @memberof BlockDevicesApiLoginBlockDevicesLoginPost
    */
-  readonly intakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
+  readonly IntakevmsModulesBlockDeviceEntrypointsSchemasInterface: IntakevmsModulesBlockDeviceEntrypointsSchemasInterface
 }
 
 /**
@@ -4042,7 +4042,7 @@ export class BlockDevicesApi extends BaseAPI {
     options?: RawAxiosRequestConfig
   ) {
     return BlockDevicesApiFp(this.configuration)
-      .loginBlockDevicesLoginPost(requestParameters.intakevmsModulesBlockDeviceEntrypointsSchemasInterface, options)
+      .loginBlockDevicesLoginPost(requestParameters.IntakevmsModulesBlockDeviceEntrypointsSchemasInterface, options)
       .then(request => request(this.axios, this.basePath))
   }
 
@@ -4572,22 +4572,22 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
      * Attach an image to a VM  The first line of the function is a docstring. This is a string that describes what the function does. It\'s a good idea to include a docstring for every function you write  Args:     image_id (str): str - the id of the image to be attached     data (str): str - the id of the VM to which the image will be attached     user_info: The dependency that check user was authorised     crud: This is the dependency that we created in the previous section.  Returns:     schemas.AttachImageInfo: The attached image.
      * @summary Attach Image
      * @param {string} imageId Image id (UUID4)
-     * @param {IntakevmsModulesImageEntrypointsSchemasAttachImage} intakevmsModulesImageEntrypointsSchemasAttachImage
+     * @param {IntakevmsModulesImageEntrypointsSchemasAttachImage} IntakevmsModulesImageEntrypointsSchemasAttachImage
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     attachImageImagesImageIdAttachPost: async (
       imageId: string,
-      intakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage,
+      IntakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage,
       options: RawAxiosRequestConfig = {}
     ): Promise<RequestArgs> => {
       // verify required parameter 'imageId' is not null or undefined
       assertParamExists('attachImageImagesImageIdAttachPost', 'imageId', imageId)
-      // verify required parameter 'intakevmsModulesImageEntrypointsSchemasAttachImage' is not null or undefined
+      // verify required parameter 'IntakevmsModulesImageEntrypointsSchemasAttachImage' is not null or undefined
       assertParamExists(
         'attachImageImagesImageIdAttachPost',
-        'intakevmsModulesImageEntrypointsSchemasAttachImage',
-        intakevmsModulesImageEntrypointsSchemasAttachImage
+        'IntakevmsModulesImageEntrypointsSchemasAttachImage',
+        IntakevmsModulesImageEntrypointsSchemasAttachImage
       )
       const localVarPath = `/images/{image_id}/attach/`.replace(`{${'image_id'}}`, encodeURIComponent(String(imageId)))
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -4611,7 +4611,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
       localVarRequestOptions.data = serializeDataIfNeeded(
-        intakevmsModulesImageEntrypointsSchemasAttachImage,
+        IntakevmsModulesImageEntrypointsSchemasAttachImage,
         localVarRequestOptions,
         configuration
       )
@@ -4869,18 +4869,18 @@ export const ImageApiFp = function (configuration?: Configuration) {
      * Attach an image to a VM  The first line of the function is a docstring. This is a string that describes what the function does. It\'s a good idea to include a docstring for every function you write  Args:     image_id (str): str - the id of the image to be attached     data (str): str - the id of the VM to which the image will be attached     user_info: The dependency that check user was authorised     crud: This is the dependency that we created in the previous section.  Returns:     schemas.AttachImageInfo: The attached image.
      * @summary Attach Image
      * @param {string} imageId Image id (UUID4)
-     * @param {IntakevmsModulesImageEntrypointsSchemasAttachImage} intakevmsModulesImageEntrypointsSchemasAttachImage
+     * @param {IntakevmsModulesImageEntrypointsSchemasAttachImage} IntakevmsModulesImageEntrypointsSchemasAttachImage
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async attachImageImagesImageIdAttachPost(
       imageId: string,
-      intakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage,
+      IntakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage,
       options?: RawAxiosRequestConfig
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AttachImageInfo>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.attachImageImagesImageIdAttachPost(
         imageId,
-        intakevmsModulesImageEntrypointsSchemasAttachImage,
+        IntakevmsModulesImageEntrypointsSchemasAttachImage,
         options
       )
       const index = configuration?.serverIndex ?? 0
@@ -5049,7 +5049,7 @@ export const ImageApiFactory = function (configuration?: Configuration, basePath
       return localVarFp
         .attachImageImagesImageIdAttachPost(
           requestParameters.imageId,
-          requestParameters.intakevmsModulesImageEntrypointsSchemasAttachImage,
+          requestParameters.IntakevmsModulesImageEntrypointsSchemasAttachImage,
           options
         )
         .then(request => request(axios, basePath))
@@ -5156,7 +5156,7 @@ export interface ImageApiAttachImageImagesImageIdAttachPostRequest {
    * @type {IntakevmsModulesImageEntrypointsSchemasAttachImage}
    * @memberof ImageApiAttachImageImagesImageIdAttachPost
    */
-  readonly intakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage
+  readonly IntakevmsModulesImageEntrypointsSchemasAttachImage: IntakevmsModulesImageEntrypointsSchemasAttachImage
 }
 
 /**
@@ -5293,7 +5293,7 @@ export class ImageApi extends BaseAPI {
     return ImageApiFp(this.configuration)
       .attachImageImagesImageIdAttachPost(
         requestParameters.imageId,
-        requestParameters.intakevmsModulesImageEntrypointsSchemasAttachImage,
+        requestParameters.IntakevmsModulesImageEntrypointsSchemasAttachImage,
         options
       )
       .then(request => request(this.axios, this.basePath))
@@ -10007,22 +10007,22 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
      * It takes a volume_id and a data object, and then it calls the attach_volume method on the scheduler manager  Args:     volume_id (str): The ID of the volume to be attached.     data (schemas.AttachVolume): schemas.AttachVolume     user_info: The dependency that check user was authorized     crud: This is the dependency that we created in the previous section.  Returns:     The return value is a JSONResponse object.
      * @summary Attach Volume
      * @param {string} volumeId Volume id (UUID4)
-     * @param {IntakevmsModulesVolumeEntrypointsSchemasAttachVolume} intakevmsModulesVolumeEntrypointsSchemasAttachVolume
+     * @param {IntakevmsModulesVolumeEntrypointsSchemasAttachVolume} IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     attachVolumeVolumesVolumeIdAttachPost: async (
       volumeId: string,
-      intakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
+      IntakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
       options: RawAxiosRequestConfig = {}
     ): Promise<RequestArgs> => {
       // verify required parameter 'volumeId' is not null or undefined
       assertParamExists('attachVolumeVolumesVolumeIdAttachPost', 'volumeId', volumeId)
-      // verify required parameter 'intakevmsModulesVolumeEntrypointsSchemasAttachVolume' is not null or undefined
+      // verify required parameter 'IntakevmsModulesVolumeEntrypointsSchemasAttachVolume' is not null or undefined
       assertParamExists(
         'attachVolumeVolumesVolumeIdAttachPost',
-        'intakevmsModulesVolumeEntrypointsSchemasAttachVolume',
-        intakevmsModulesVolumeEntrypointsSchemasAttachVolume
+        'IntakevmsModulesVolumeEntrypointsSchemasAttachVolume',
+        IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
       )
       const localVarPath = `/volumes/{volume_id}/attach/`.replace(
         `{${'volume_id'}}`,
@@ -10049,7 +10049,7 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
       let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {}
       localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers }
       localVarRequestOptions.data = serializeDataIfNeeded(
-        intakevmsModulesVolumeEntrypointsSchemasAttachVolume,
+        IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
         localVarRequestOptions,
         configuration
       )
@@ -10392,18 +10392,18 @@ export const VolumeApiFp = function (configuration?: Configuration) {
      * It takes a volume_id and a data object, and then it calls the attach_volume method on the scheduler manager  Args:     volume_id (str): The ID of the volume to be attached.     data (schemas.AttachVolume): schemas.AttachVolume     user_info: The dependency that check user was authorized     crud: This is the dependency that we created in the previous section.  Returns:     The return value is a JSONResponse object.
      * @summary Attach Volume
      * @param {string} volumeId Volume id (UUID4)
-     * @param {IntakevmsModulesVolumeEntrypointsSchemasAttachVolume} intakevmsModulesVolumeEntrypointsSchemasAttachVolume
+     * @param {IntakevmsModulesVolumeEntrypointsSchemasAttachVolume} IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async attachVolumeVolumesVolumeIdAttachPost(
       volumeId: string,
-      intakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
+      IntakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
       options?: RawAxiosRequestConfig
     ): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AttachVolumeInfo>> {
       const localVarAxiosArgs = await localVarAxiosParamCreator.attachVolumeVolumesVolumeIdAttachPost(
         volumeId,
-        intakevmsModulesVolumeEntrypointsSchemasAttachVolume,
+        IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
         options
       )
       const index = configuration?.serverIndex ?? 0
@@ -10624,7 +10624,7 @@ export const VolumeApiFactory = function (configuration?: Configuration, basePat
       return localVarFp
         .attachVolumeVolumesVolumeIdAttachPost(
           requestParameters.volumeId,
-          requestParameters.intakevmsModulesVolumeEntrypointsSchemasAttachVolume,
+          requestParameters.IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
           options
         )
         .then(request => request(axios, basePath))
@@ -10761,7 +10761,7 @@ export interface VolumeApiAttachVolumeVolumesVolumeIdAttachPostRequest {
    * @type {IntakevmsModulesVolumeEntrypointsSchemasAttachVolume}
    * @memberof VolumeApiAttachVolumeVolumesVolumeIdAttachPost
    */
-  readonly intakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
+  readonly IntakevmsModulesVolumeEntrypointsSchemasAttachVolume: IntakevmsModulesVolumeEntrypointsSchemasAttachVolume
 }
 
 /**
@@ -10926,7 +10926,7 @@ export class VolumeApi extends BaseAPI {
     return VolumeApiFp(this.configuration)
       .attachVolumeVolumesVolumeIdAttachPost(
         requestParameters.volumeId,
-        requestParameters.intakevmsModulesVolumeEntrypointsSchemasAttachVolume,
+        requestParameters.IntakevmsModulesVolumeEntrypointsSchemasAttachVolume,
         options
       )
       .then(request => request(this.axios, this.basePath))
