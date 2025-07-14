@@ -1,114 +1,114 @@
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 100;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-Thin.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-Thin.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 200;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-ExtraLight.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-ExtraLight.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 300;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-Light.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-Light.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 400;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-Regular.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-Regular.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 500;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-Medium.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-Medium.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 600;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-SemiBold.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-SemiBold.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 700;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-Bold.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-Bold.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 800;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-ExtraBold.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-ExtraBold.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 900;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-Black.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-Black.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 100;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-ThinItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-ThinItalic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 200;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-ExtraLightItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-ExtraLightItalic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 300;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-LightItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-LightItalic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 400;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-Italic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-Italic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 500;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-MediumItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-MediumItalic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 500;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-MediumItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-MediumItalic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 600;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-SemiBoldItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-SemiBoldItalic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 700;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-BoldItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-BoldItalic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 800;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-ExtraBoldItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-ExtraBoldItalic.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Exo 2';
+    font-family: 'Geist';
     font-style: italic;
     font-weight: 900;
-    src: local('Exo 2'), url(@/assets/fonts/Exo2-BlackItalic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-BlackItalic.ttf) format('truetype');
 }
