@@ -74,7 +74,7 @@
     font-family: 'Geist';
     font-style: italic;
     font-weight: 400;
-    src: local('Geist'), url(@/assets/fonts/Geist-Italic.ttf) format('truetype');
+    src: local('Geist'), url(@/assets/fonts/Geist-RegularItalic.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Geist';
